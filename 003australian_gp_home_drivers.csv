@@ -1,0 +1,20 @@
+driver,nationality,career_starts,career_wins,career_podiums,career_top10_finishes,career_best_finish,career_points,home_gp_starts,home_gp_top10_finishes,home_gp_best_finish,weight,profile,x,y
+Jack Brabham,Australian,128,14,31,73,1,261,0,0,0,244.31370849898477,Three-time world champion and the deepest historical anchor for Australian F1 culture.,0.5,0.47
+Alan Jones,Australian,117,12,24,54,1,206,2,0,21,196.81665382639196,"Australia's 1980 world champion, connecting this race to national motorsport memory.",0.17,0.25
+Mark Webber,Australian,217,9,42,133,1,1046,12,6,4,312.7309198626562,Long-serving Australian F1 driver with the strongest Australian GP top-10 count in this dataset.,0.8,0.25
+Daniel Ricciardo,Australian,257,8,32,135,1,1320,10,5,4,286.0312195418814,Modern Australian fan favourite whose home-race best finish reached fourth.,0.22,0.73
+Oscar Piastri,Australian,46,2,10,34,1,347,2,2,4,80.78232998312527,Current-generation Australian driver with early Australian GP top-10 finishes.,0.78,0.73
+Tim Schenken,Australian,36,0,1,9,3,7,0,0,0,17,Australian Formula 1 driver; included to show the broader national racing lineage.,0.05,0.47
+David Brabham,Australian,30,0,0,2,10,0,2,0,17,7.477225575051661,Australian Formula 1 driver; included to show the broader national racing lineage.,0.95,0.47
+David Walker,Australian,11,0,0,2,9,0,0,0,0,5.3166247903554,Australian Formula 1 driver; included to show the broader national racing lineage.,0.5,0.08
+Paul Hawkins,Australian,3,0,0,2,9,0,0,0,0,3.732050807568877,Australian Formula 1 driver; included to show the broader national racing lineage.,0.5,0.9
+Frank Gardner,Australian,9,0,0,1,8,0,0,0,0,4,Australian Formula 1 driver; included to show the broader national racing lineage.,0.05,0.14
+Larry Perkins,Australian,15,0,0,1,8,0,0,0,0,4.872983346207417,Australian Formula 1 driver; included to show the broader national racing lineage.,0.95,0.14
+Vern Schuppan,Australian,12,0,0,1,7,0,0,0,0,4.464101615137754,Australian Formula 1 driver; included to show the broader national racing lineage.,0.05,0.62
+Brian McGuire,Australian,1,0,0,0,35,0,0,0,0,1,Australian Formula 1 driver; included to show the broader national racing lineage.,0.95,0.62
+Gary Brabham,Australian,2,0,0,0,34,0,0,0,0,1.4142135623730951,Australian Formula 1 driver; included to show the broader national racing lineage.,0.32,0.08
+Jack Doohan,Australian,1,0,0,0,15,0,0,0,0,1,Australian Formula 1 driver; included to show the broader national racing lineage.,0.68,0.08
+Ken Kavanagh,Australian,1,0,0,0,18,0,0,0,0,1,Australian Formula 1 driver; included to show the broader national racing lineage.,0.28,0.93
+Paul England,Australian,1,0,0,0,22,0,0,0,0,1,Australian Formula 1 driver; included to show the broader national racing lineage.,0.72,0.93
+Tony Gaze,Australian,4,0,0,0,15,0,0,0,0,2,Australian Formula 1 driver; included to show the broader national racing lineage.,0.95,0.36
+Warwick Brown,Australian,1,0,0,0,14,0,0,0,0,1,Australian Formula 1 driver; included to show the broader national racing lineage.,0.05,0.36

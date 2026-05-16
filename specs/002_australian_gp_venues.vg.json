@@ -1,0 +1,236 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 280,
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5d6670",
+      "titleColor": "#30353b",
+      "gridColor": "#e6e8e3",
+      "domainColor": "#cfd4ce",
+      "tickColor": "#cfd4ce"
+    },
+    "legend": {
+      "labelColor": "#30353b",
+      "titleColor": "#30353b",
+      "orient": "bottom"
+    },
+    "font": "Inter"
+  },
+  "data": {
+    "values": [
+      {
+        "era": "Adelaide era",
+        "location": "Adelaide",
+        "circuit_name": "Adelaide Street Circuit",
+        "start_year": 1985,
+        "end_year": 1995,
+        "hosted_years": 11,
+        "label": "1985 – 1995"
+      },
+      {
+        "era": "Melbourne era",
+        "location": "Melbourne",
+        "circuit_name": "Albert Park Grand Prix Circuit",
+        "start_year": 1996,
+        "end_year": 2019,
+        "hosted_years": 24,
+        "label": "1996 – 2019"
+      },
+      {
+        "era": "Pandemic pause",
+        "location": "No race",
+        "circuit_name": "No Australian GP",
+        "start_year": 2020,
+        "end_year": 2021,
+        "hosted_years": 0,
+        "label": "2020 – 2021"
+      },
+      {
+        "era": "Post-pandemic return",
+        "location": "Melbourne",
+        "circuit_name": "Albert Park Grand Prix Circuit",
+        "start_year": 2022,
+        "end_year": 2024,
+        "hosted_years": 3,
+        "label": "2022 – 2024"
+      }
+    ]
+  },
+  "transform": [
+    {
+      "calculate": "max(datum.hosted_years, 1.5)",
+      "as": "bar_height"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadius": 5
+      },
+      "encoding": {
+        "x": {
+          "field": "era",
+          "type": "nominal",
+          "sort": [
+            "Adelaide era",
+            "Melbourne era",
+            "Pandemic pause",
+            "Post-pandemic return"
+          ],
+          "axis": null
+        },
+        "y": {
+          "field": "bar_height",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [0, 27]
+          }
+        },
+        "color": {
+          "field": "era",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Adelaide era",
+              "Melbourne era",
+              "Pandemic pause",
+              "Post-pandemic return"
+            ],
+            "range": [
+              "#1f2428",
+              "#007a63",
+              "#8e969d",
+              "#f0c419"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "era",
+            "title": "Era"
+          },
+          {
+            "field": "circuit_name",
+            "title": "Circuit"
+          },
+          {
+            "field": "start_year",
+            "title": "Start"
+          },
+          {
+            "field": "end_year",
+            "title": "End"
+          },
+          {
+            "field": "hosted_years",
+            "title": "Races hosted"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontWeight": 900,
+        "fontSize": 22,
+        "fontFamily": "Titillium Web",
+        "dy": -44
+      },
+      "encoding": {
+        "x": {
+          "field": "era",
+          "type": "nominal"
+        },
+        "y": {
+          "field": "bar_height",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "hosted_years",
+          "format": ".0f"
+        },
+        "color": {
+          "value": "#1f2428"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontWeight": "bold",
+        "fontSize": 13,
+        "dy": -26
+      },
+      "encoding": {
+        "x": {
+          "field": "era",
+          "type": "nominal"
+        },
+        "y": {
+          "field": "bar_height",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "location"
+        },
+        "color": {
+          "value": "#1f2428"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "dy": -12
+      },
+      "encoding": {
+        "x": {
+          "field": "era",
+          "type": "nominal"
+        },
+        "y": {
+          "field": "bar_height",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        },
+        "color": {
+          "value": "#5b6670"
+        }
+      }
+    },
+
+    {
+      "data": {
+        "values": [{"era": "Melbourne era", "bar_height": 24, "label": "Longest continuous run"}]
+      },
+      "mark": {"type": "text", "fontSize": 10, "fontWeight": 600, "fontFamily": "Titillium Web", "dy": -60, "color": "#007a63"},
+      "encoding": {
+        "x": {"field": "era", "type": "nominal"},
+        "y": {"field": "bar_height", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    },
+
+    {
+      "data": {
+        "values": [{"era": "Post-pandemic return", "bar_height": 3, "label": "Returned stronger"}]
+      },
+      "mark": {"type": "text", "fontSize": 10, "fontWeight": 600, "fontFamily": "Titillium Web", "dy": -60, "color": "#e10600"},
+      "encoding": {
+        "x": {"field": "era", "type": "nominal"},
+        "y": {"field": "bar_height", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 285,
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5d6670",
+      "titleColor": "#30353b",
+      "gridColor": "#e6e8e3",
+      "domainColor": "#cfd4ce",
+      "tickColor": "#cfd4ce"
+    },
+    "legend": {
+      "labelColor": "#30353b",
+      "titleColor": "#30353b",
+      "orient": "bottom"
+    },
+    "font": "Inter"
+  },
+  "data": {
+    "values": [
+      {
+        "year": 2022,
+        "metric": "Direct expenditure",
+        "value_m": 92.0
+      },
+      {
+        "year": 2023,
+        "metric": "Direct expenditure",
+        "value_m": 144.0
+      },
+      {
+        "year": 2024,
+        "metric": "Direct expenditure",
+        "value_m": 151.5
+      },
+      {
+        "year": 2025,
+        "metric": "Direct expenditure",
+        "value_m": 174.1
+      },
+      {
+        "year": 2022,
+        "metric": "Economic impact / GSP",
+        "value_m": 171.0
+      },
+      {
+        "year": 2023,
+        "metric": "Economic impact / GSP",
+        "value_m": 268.0
+      },
+      {
+        "year": 2024,
+        "metric": "Economic impact / GSP",
+        "value_m": 281.8
+      },
+      {
+        "year": 2025,
+        "metric": "Economic impact / GSP",
+        "value_m": 323.9
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "point": { "filled": true },
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "x": { "field": "year", "type": "ordinal", "axis": { "title": null } },
+        "y": { "field": "value_m", "type": "quantitative", "axis": { "title": "AUD millions" } },
+        "color": {
+          "field": "metric",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Direct expenditure", "Economic impact / GSP"],
+            "range": ["#007a63", "#2457c5"]
+          },
+          "legend": { "title": null }
+        },
+        "tooltip": [
+          { "field": "year" },
+          { "field": "metric" },
+          { "field": "value_m", "title": "AUD millions" }
+        ]
+      }
+    },
+    {
+      "transform": [
+        { "filter": "datum.year === 2025 && datum.metric === 'Economic impact / GSP'" }
+      ],
+      "mark": { "type": "text", "align": "right", "dx": -8, "dy": -14, "fontSize": 12, "fontWeight": "bold", "fontFamily": "Titillium Web", "color": "#2457c5" },
+      "encoding": {
+        "x": { "field": "year", "type": "ordinal" },
+        "y": { "field": "value_m", "type": "quantitative" },
+        "text": { "value": "GSP +89% from 2022" }
+      }
+    },
+    {
+      "transform": [{ "filter": "datum.year === 2025" }],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "fontWeight": "bold",
+        "fontFamily": "Titillium Web",
+        "fontSize": 13
+      },
+      "encoding": {
+        "x": { "field": "year", "type": "ordinal" },
+        "y": { "field": "value_m", "type": "quantitative" },
+        "text": { "field": "value_m", "format": ".0f" },
+        "color": {
+          "field": "metric",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Direct expenditure", "Economic impact / GSP"],
+            "range": ["#007a63", "#2457c5"]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "transform": [
+        { "filter": "datum.year === 2025 && datum.metric === 'Direct expenditure'" }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -8,
+        "dy": -18,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "fontFamily": "Titillium Web",
+        "color": "#007a63"
+      },
+      "encoding": {
+        "x": { "field": "year", "type": "ordinal" },
+        "y": { "field": "value_m", "type": "quantitative" },
+        "text": { "value": "Expenditure +89% from 2022" }
+      }
+    }
+  ]
+}

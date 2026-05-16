@@ -1,0 +1,101 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 285,
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5d6670",
+      "titleColor": "#30353b",
+      "gridColor": "#e6e8e3",
+      "domainColor": "#cfd4ce",
+      "tickColor": "#cfd4ce"
+    },
+    "legend": {
+      "labelColor": "#30353b",
+      "titleColor": "#30353b",
+      "orient": "bottom"
+    },
+    "font": "Inter"
+  },
+  "data": {
+    "values": [
+      {
+        "year": 2022,
+        "gross_attendance": 419114,
+        "unique_se_visitors": 75520,
+        "interstate_se_visitors": 69049,
+        "overseas_se_visitors": 6471,
+        "direct_expenditure_m": 92.0,
+        "economic_impact_gsp_m": 171.0,
+        "fte_jobs": 734
+      },
+      {
+        "year": 2023,
+        "gross_attendance": 444631,
+        "unique_se_visitors": 80987,
+        "interstate_se_visitors": 72176,
+        "overseas_se_visitors": 8811,
+        "direct_expenditure_m": 144.0,
+        "economic_impact_gsp_m": 268.0,
+        "fte_jobs": 1149
+      },
+      {
+        "year": 2024,
+        "gross_attendance": 452055,
+        "unique_se_visitors": 86664,
+        "interstate_se_visitors": 70731,
+        "overseas_se_visitors": 15933,
+        "direct_expenditure_m": 151.5,
+        "economic_impact_gsp_m": 281.8,
+        "fte_jobs": 1419
+      },
+      {
+        "year": 2025,
+        "gross_attendance": 465498,
+        "unique_se_visitors": 99046,
+        "interstate_se_visitors": 78254,
+        "overseas_se_visitors": 20792,
+        "direct_expenditure_m": 174.1,
+        "economic_impact_gsp_m": 323.9,
+        "fte_jobs": 1631
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": { "type": "bar", "cornerRadiusEnd": 4 },
+      "encoding": {
+        "x": { "field": "year", "type": "ordinal", "axis": { "title": null } },
+        "y": { "field": "fte_jobs", "type": "quantitative", "axis": { "title": "FTE jobs" } },
+        "color": {
+          "condition": { "test": "datum.year === 2025", "value": "#e10600" },
+          "value": "#1f2428"
+        },
+        "tooltip": [
+          { "field": "year" },
+          { "field": "fte_jobs", "title": "FTE jobs", "format": "," }
+        ]
+      }
+    },
+    {
+      "mark": { "type": "text", "dy": -7, "fontWeight": "bold", "fontFamily": "Titillium Web" },
+      "encoding": {
+        "x": { "field": "year", "type": "ordinal" },
+        "y": { "field": "fte_jobs", "type": "quantitative" },
+        "text": { "field": "fte_jobs", "format": "," }
+      }
+    },
+    {
+      "transform": [{ "filter": "datum.year === 2025" }],
+      "mark": { "type": "text", "dy": -28, "fontSize": 12, "fontWeight": "bold", "fontFamily": "Titillium Web", "color": "#e10600" },
+      "encoding": {
+        "x": { "field": "year", "type": "ordinal" },
+        "y": { "field": "fte_jobs", "type": "quantitative" },
+        "text": { "value": "Doubled in 4 years" }
+      }
+    }
+  ]
+}

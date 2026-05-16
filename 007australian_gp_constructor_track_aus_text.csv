@@ -1,0 +1,39 @@
+year,driver,driver_nationality,constructor,constructor_code,angle,x,y,era,letter,letter_seq
+1985,Keke Rosberg,Finnish,Williams,WIL,-79.452,-1.15,0.75,Adelaide era,A,1
+1986,Alain Prost,French,McLaren,MCL,-79.452,-1.08521,0.402052,Adelaide era,A,2
+1987,Gerhard Berger,Austrian,Ferrari,FER,-79.452,-1.020419,0.054104,Adelaide era,A,3
+1988,Alain Prost,French,McLaren,MCL,-79.452,-0.955629,-0.293844,Adelaide era,A,4
+1989,Thierry Boutsen,Belgian,Williams,WIL,-79.452,-0.890839,-0.641792,Adelaide era,A,5
+1990,Nelson Piquet,Brazilian,Benetton,BEN,79.071,-0.824121,-0.410626,Adelaide era,A,6
+1991,Ayrton Senna,Brazilian,McLaren,MCL,79.071,-0.757016,-0.063117,Adelaide era,A,7
+1992,Gerhard Berger,Austrian,McLaren,MCL,79.071,-0.68991,0.284392,Adelaide era,A,8
+1993,Ayrton Senna,Brazilian,McLaren,MCL,79.071,-0.622805,0.631901,Adelaide era,A,9
+1994,Nigel Mansell,British,Williams,WIL,-100.954,-0.644398,0.520609,Adelaide era,A,10
+1995,Damon Hill,British,Williams,WIL,-100.954,-0.711653,0.173128,Adelaide era,A,11
+1996,Damon Hill,British,Williams,WIL,180.0,-1.03,0.13,Melbourne era,A,12
+1997,David Coulthard,British,McLaren,MCL,90.0,-0.34,-0.7,Melbourne era,U,1
+1998,Mika Häkkinen,Finnish,McLaren,MCL,90.0,-0.34,-0.419205,Melbourne era,U,2
+1999,Eddie Irvine,British,Ferrari,FER,90.0,-0.34,-0.13841,Melbourne era,U,3
+2000,Michael Schumacher,German,Ferrari,FER,90.0,-0.34,0.142385,Melbourne era,U,4
+2001,Michael Schumacher,German,Ferrari,FER,68.199,-0.338819,0.422953,Melbourne era,U,5
+2002,Michael Schumacher,German,Ferrari,FER,68.199,-0.234534,0.683665,Melbourne era,U,6
+2003,David Coulthard,British,McLaren,MCL,24.444,-0.0,0.82,Melbourne era,U,7
+2004,Michael Schumacher,German,Ferrari,FER,-68.199,0.234534,0.683665,Melbourne era,U,8
+2005,Giancarlo Fisichella,Italian,Renault,REN,-68.199,0.338819,0.422953,Melbourne era,U,9
+2006,Fernando Alonso,Spanish,Renault,REN,-90.0,0.34,0.142385,Melbourne era,U,10
+2007,Kimi Räikkönen,Finnish,Ferrari,FER,-90.0,0.34,-0.13841,Melbourne era,U,11
+2008,Lewis Hamilton,British,McLaren,MCL,-90.0,0.34,-0.419205,Melbourne era,U,12
+2009,Jenson Button,British,Brawn,BRN,-90.0,0.34,-0.7,Melbourne era,U,13
+2010,Jenson Button,British,McLaren,MCL,-161.565,1.12,-0.62,Melbourne era,S,1
+2011,Sebastian Vettel,German,Red Bull,RBR,-161.565,0.925693,-0.684769,Melbourne era,S,2
+2012,Jenson Button,British,McLaren,MCL,132.51,0.756882,-0.651144,Melbourne era,S,3
+2013,Kimi Räikkönen,Finnish,Lotus F1,LOT,132.51,0.618482,-0.500162,Melbourne era,S,4
+2014,Nico Rosberg,German,Mercedes,MER,72.121,0.654483,-0.311103,Melbourne era,S,5
+2015,Lewis Hamilton,British,Mercedes,MER,29.745,0.749103,-0.141941,Melbourne era,S,6
+2016,Nico Rosberg,German,Mercedes,MER,29.745,0.926935,-0.040323,Melbourne era,S,7
+2017,Sebastian Vettel,German,Ferrari,FER,67.249,1.074394,0.08817,Melbourne era,S,8
+2018,Sebastian Vettel,German,Ferrari,FER,67.249,1.153602,0.277051,Melbourne era,S,9
+2019,Valtteri Bottas,Finnish,Mercedes,MER,123.69,1.104251,0.453623,Melbourne era,S,10
+2022,Charles Leclerc,Monegasque,Ferrari,FER,123.69,0.990639,0.624042,Post-pandemic return,S,11
+2023,Max Verstappen,Dutch,Red Bull,RBR,-163.61,0.816495,0.627793,Post-pandemic return,S,12
+2024,Carlos Sainz,Spanish,Ferrari,FER,-163.61,0.62,0.57,Post-pandemic return,S,13

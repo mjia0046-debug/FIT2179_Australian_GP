@@ -1,0 +1,119 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 300,
+  "config": {
+    "view": {"stroke": null},
+    "axis": {
+      "labelColor": "#5d6670",
+      "titleColor": "#30353b",
+      "gridColor": "#e6e8e3",
+      "domainColor": "#cfd4ce",
+      "tickColor": "#cfd4ce"
+    },
+    "legend": {
+      "labelColor": "#30353b",
+      "titleColor": "#30353b",
+      "orient": "bottom"
+    },
+    "font": "Inter"
+  },
+  "layer": [
+    {
+      "data": {"values": [{"y": 100}]},
+      "mark": {"type": "rule", "strokeDash": [6, 4], "strokeWidth": 1.2, "color": "#b0b8c1"},
+      "encoding": {
+        "y": {"field": "y", "type": "quantitative"}
+      }
+    },
+
+    {
+      "data": {"values": [{"year": 2022, "y": 100, "label": "2022 baseline = 100"}]},
+      "mark": {"type": "text", "align": "left", "dx": 4, "dy": -10, "fontSize": 10, "fontWeight": 500, "fontStyle": "italic", "color": "#8e969d"},
+      "encoding": {
+        "x": {"field": "year", "type": "ordinal"},
+        "y": {"field": "y", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    },
+
+    {
+      "data": {
+        "values": [
+          {"year": 2022, "metric": "Visitors", "index": 100, "raw": "75,520"},
+          {"year": 2023, "metric": "Visitors", "index": 107.2, "raw": "80,987"},
+          {"year": 2024, "metric": "Visitors", "index": 114.8, "raw": "86,664"},
+          {"year": 2025, "metric": "Visitors", "index": 131.1, "raw": "99,046"},
+          {"year": 2022, "metric": "Expenditure", "index": 100, "raw": "$92M"},
+          {"year": 2023, "metric": "Expenditure", "index": 156.5, "raw": "$144M"},
+          {"year": 2024, "metric": "Expenditure", "index": 164.7, "raw": "$152M"},
+          {"year": 2025, "metric": "Expenditure", "index": 189.2, "raw": "$174M"},
+          {"year": 2022, "metric": "Overseas visitors", "index": 100, "raw": "6,471"},
+          {"year": 2023, "metric": "Overseas visitors", "index": 136.2, "raw": "8,811"},
+          {"year": 2024, "metric": "Overseas visitors", "index": 246.2, "raw": "15,933"},
+          {"year": 2025, "metric": "Overseas visitors", "index": 321.3, "raw": "20,792"},
+          {"year": 2022, "metric": "FTE jobs", "index": 100, "raw": "734"},
+          {"year": 2023, "metric": "FTE jobs", "index": 156.5, "raw": "1,149"},
+          {"year": 2024, "metric": "FTE jobs", "index": 193.3, "raw": "1,419"},
+          {"year": 2025, "metric": "FTE jobs", "index": 222.2, "raw": "1,631"}
+        ]
+      },
+      "mark": {"type": "line", "point": {"filled": true, "size": 50}, "strokeWidth": 2.5},
+      "encoding": {
+        "x": {"field": "year", "type": "ordinal", "axis": {"title": null}},
+        "y": {"field": "index", "type": "quantitative", "axis": {"title": "Growth index (2022 = 100)", "grid": true}, "scale": {"domain": [90, 340]}},
+        "color": {
+          "field": "metric",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Overseas visitors", "FTE jobs", "Expenditure", "Visitors"],
+            "range": ["#2457c5", "#e10600", "#007a63", "#f0c419"]
+          },
+          "legend": {"title": null}
+        },
+        "tooltip": [
+          {"field": "metric", "title": "Metric"},
+          {"field": "year"},
+          {"field": "index", "title": "Growth index", "format": ".1f"},
+          {"field": "raw", "title": "Actual value"}
+        ]
+      }
+    },
+
+    {
+      "data": {
+        "values": [
+          {"year": 2025, "metric": "Overseas visitors", "index": 321.3, "label": "Overseas  321"},
+          {"year": 2025, "metric": "FTE jobs", "index": 222.2, "label": "FTE jobs  222"},
+          {"year": 2025, "metric": "Expenditure", "index": 189.2, "label": "Expenditure  189"},
+          {"year": 2025, "metric": "Visitors", "index": 131.1, "label": "Visitors  131"}
+        ]
+      },
+      "mark": {"type": "text", "align": "left", "dx": 8, "fontSize": 11, "fontWeight": "bold", "fontFamily": "Titillium Web"},
+      "encoding": {
+        "x": {"field": "year", "type": "ordinal"},
+        "y": {"field": "index", "type": "quantitative"},
+        "text": {"field": "label"},
+        "color": {
+          "field": "metric",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Overseas visitors", "FTE jobs", "Expenditure", "Visitors"],
+            "range": ["#2457c5", "#e10600", "#007a63", "#f0c419"]
+          },
+          "legend": null
+        }
+      }
+    },
+
+    {
+      "data": {"values": [{"year": 2025, "index": 321.3, "label": "Overseas visitors grew fastest: +221% in 4 years"}]},
+      "mark": {"type": "text", "align": "right", "dx": -4, "dy": -14, "fontSize": 11, "fontWeight": 600, "fontFamily": "Titillium Web", "color": "#e10600"},
+      "encoding": {
+        "x": {"field": "year", "type": "ordinal"},
+        "y": {"field": "index", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    }
+  ]
+}

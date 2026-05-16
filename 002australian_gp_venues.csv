@@ -1,0 +1,5 @@
+era,location,circuit_name,start_year,end_year,hosted_years,label
+Adelaide era,Adelaide,Adelaide Street Circuit,1985,1995,11,1985 – 1995
+Melbourne era,Melbourne,Albert Park Grand Prix Circuit,1996,2019,24,1996 – 2019
+Pandemic pause,No race,No Australian GP,2020,2021,0,2020 – 2021
+Post-pandemic return,Melbourne,Albert Park Grand Prix Circuit,2022,2024,3,2022 – 2024

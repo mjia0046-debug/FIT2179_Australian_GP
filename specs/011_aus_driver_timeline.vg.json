@@ -1,0 +1,140 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 420,
+  "padding": {"left": 10, "right": 20, "top": 10, "bottom": 10},
+  "config": {
+    "view": { "stroke": null },
+    "axis": { "labelColor": "#5d6670", "titleColor": "#30353b", "gridColor": "#e6e8e3", "domainColor": "#cfd4ce", "tickColor": "#cfd4ce", "labelFont": "Inter", "titleFont": "Inter" },
+    "legend": { "labelFont": "Inter", "titleFont": "Inter" },
+    "font": "Inter"
+  },
+  "data": {
+    "values": [
+      {"driver": "Jack Brabham",     "career_start": 1955, "career_end": 1970, "career_starts": 128, "career_wins": 14, "home_gp_starts": 0, "home_gp_years": ""},
+      {"driver": "Alan Jones",       "career_start": 1975, "career_end": 1986, "career_starts": 117, "career_wins": 12, "home_gp_starts": 2, "home_gp_years": "1985;1986"},
+      {"driver": "David Brabham",    "career_start": 1990, "career_end": 1994, "career_starts": 30,  "career_wins": 0,  "home_gp_starts": 2, "home_gp_years": "1990;1994"},
+      {"driver": "Mark Webber",      "career_start": 2002, "career_end": 2013, "career_starts": 217, "career_wins": 9,  "home_gp_starts": 12,"home_gp_years": "2002;2003;2004;2005;2006;2007;2008;2009;2010;2011;2012;2013"},
+      {"driver": "Daniel Ricciardo", "career_start": 2011, "career_end": 2024, "career_starts": 257, "career_wins": 8,  "home_gp_starts": 10,"home_gp_years": "2012;2013;2014;2015;2016;2017;2018;2019;2022;2023"},
+      {"driver": "Oscar Piastri",    "career_start": 2023, "career_end": 2024, "career_starts": 46,  "career_wins": 2,  "home_gp_starts": 2, "home_gp_years": "2023;2024"},
+      {"driver": "Jack Doohan",      "career_start": 2024, "career_end": 2024, "career_starts": 1,   "career_wins": 0,  "home_gp_starts": 0, "home_gp_years": ""}
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {"x1": 1985, "x2": 1995.5, "era": "Adelaide"},
+          {"x1": 1995.5, "x2": 2019.5, "era": "Melbourne"},
+          {"x1": 2019.5, "x2": 2021.5, "era": "Pause"},
+          {"x1": 2021.5, "x2": 2025, "era": "Return"}
+        ]
+      },
+      "mark": { "type": "rect" },
+      "encoding": {
+        "x": { "field": "x1", "type": "quantitative", "scale": { "domain": [1954, 2025] } },
+        "x2": { "field": "x2" },
+        "color": {
+          "field": "era",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Adelaide", "Melbourne", "Pause", "Return"],
+            "range": ["rgba(31,36,40,0.08)", "rgba(0,122,99,0.08)", "rgba(142,150,157,0.12)", "rgba(225,6,0,0.08)"]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"x": 1990, "label": "Adelaide"},
+          {"x": 2007, "label": "Melbourne"},
+          {"x": 2020.5, "label": "Pause"},
+          {"x": 2023, "label": "Return"}
+        ]
+      },
+      "mark": { "type": "text", "fontSize": 10, "fontWeight": 600, "dy": -6, "opacity": 0.5 },
+      "encoding": {
+        "x": { "field": "x", "type": "quantitative" },
+        "y": { "value": 0 },
+        "text": { "field": "label" },
+        "color": { "value": "#30353b" }
+      }
+    },
+    {
+      "mark": { "type": "bar", "height": 18, "cornerRadius": 3, "cursor": "pointer" },
+      "encoding": {
+        "x": { "field": "career_start", "type": "quantitative", "scale": { "domain": [1954, 2025] }, "axis": { "format": "d", "title": null, "tickCount": 8 } },
+        "x2": { "field": "career_end" },
+        "y": { "field": "driver", "type": "nominal", "sort": { "field": "career_start" }, "axis": { "title": null, "labelFontSize": 12, "labelFontWeight": 500 } },
+        "color": { "value": "#b0b8c1" },
+        "tooltip": [
+          { "field": "driver", "title": "Driver" },
+          { "field": "career_start", "title": "Career start" },
+          { "field": "career_end", "title": "Career end" },
+          { "field": "career_starts", "title": "Career GP starts" },
+          { "field": "career_wins", "title": "Career wins" },
+          { "field": "home_gp_starts", "title": "Australian GP starts" }
+        ]
+      }
+    },
+    {
+      "transform": [
+        { "filter": "datum.home_gp_years !== ''" },
+        { "calculate": "split(datum.home_gp_years, ';')", "as": "year_list" },
+        { "flatten": ["year_list"] },
+        { "calculate": "+datum.year_list", "as": "home_year" }
+      ],
+      "mark": { "type": "circle", "size": 65, "stroke": "#ffffff", "strokeWidth": 1.2, "opacity": 1 },
+      "encoding": {
+        "x": { "field": "home_year", "type": "quantitative" },
+        "y": { "field": "driver", "type": "nominal" },
+        "color": { "value": "#e10600" },
+        "tooltip": [
+          { "field": "driver", "title": "Driver" },
+          { "field": "home_year", "title": "Australian GP year" }
+        ]
+      }
+    },
+    {
+      "transform": [
+        { "filter": "datum.home_gp_starts > 0" },
+        { "calculate": "datum.home_gp_starts + ' home GP' + (datum.home_gp_starts > 1 ? 's' : '')", "as": "summary" }
+      ],
+      "mark": { "type": "text", "align": "left", "dx": 8, "fontSize": 10, "fontWeight": 600 },
+      "encoding": {
+        "x": { "field": "career_end", "type": "quantitative" },
+        "y": { "field": "driver", "type": "nominal" },
+        "text": { "field": "summary" },
+        "color": { "value": "#e10600" }
+      }
+    },
+
+    {
+      "transform": [
+        {"filter": "datum.driver === 'Jack Brabham'"},
+        {"calculate": "'Retired 15 yrs before the first Australian GP'", "as": "annotation"}
+      ],
+      "mark": {"type": "text", "align": "left", "dx": 6, "fontSize": 9.5, "fontWeight": 600, "fontFamily": "Titillium Web", "color": "#5b6670"},
+      "encoding": {
+        "x": {"field": "career_end", "type": "quantitative"},
+        "y": {"field": "driver", "type": "nominal", "sort": {"field": "career_start"}},
+        "text": {"field": "annotation"}
+      }
+    },
+
+    {
+      "transform": [
+        {"filter": "datum.driver === 'Mark Webber'"},
+        {"calculate": "'Webber & Ricciardo overlapped — 22 combined home GPs'", "as": "annotation"}
+      ],
+      "mark": {"type": "text", "align": "left", "dx": 6, "dy": 24, "fontSize": 9.5, "fontWeight": 600, "fontFamily": "Titillium Web", "color": "#e10600"},
+      "encoding": {
+        "x": {"field": "career_end", "type": "quantitative"},
+        "y": {"field": "driver", "type": "nominal", "sort": {"field": "career_start"}},
+        "text": {"field": "annotation"}
+      }
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 280,
+  "config": {
+    "view": { "stroke": null },
+    "axis": {
+      "labelColor": "#5d6670",
+      "titleColor": "#30353b",
+      "gridColor": "#e6e8e3",
+      "domainColor": "#cfd4ce",
+      "tickColor": "#cfd4ce"
+    },
+    "legend": {
+      "labelColor": "#30353b",
+      "titleColor": "#30353b",
+      "orient": "bottom"
+    },
+    "font": "Inter"
+  },
+  "data": {
+    "values": [
+      { "year": 2022, "origin": "Interstate", "visitors": 69049 },
+      { "year": 2023, "origin": "Interstate", "visitors": 72176 },
+      { "year": 2024, "origin": "Interstate", "visitors": 70731 },
+      { "year": 2025, "origin": "Interstate", "visitors": 78254 },
+      { "year": 2022, "origin": "Overseas", "visitors": 6471 },
+      { "year": 2023, "origin": "Overseas", "visitors": 8811 },
+      { "year": 2024, "origin": "Overseas", "visitors": 15933 },
+      { "year": 2025, "origin": "Overseas", "visitors": 20792 }
+    ]
+  },
+  "transform": [
+    {
+      "joinaggregate": [
+        { "op": "sum", "field": "visitors", "as": "year_total" }
+      ],
+      "groupby": ["year"]
+    },
+    { "calculate": "datum.visitors / datum.year_total", "as": "share" },
+    { "calculate": "format(datum.share, '.0%')", "as": "share_label" },
+    { "calculate": "format(datum.year_total / 1000, '.0f') + 'K total'", "as": "total_label" }
+  ],
+  "layer": [
+    {
+      "mark": { "type": "bar", "cornerRadiusEnd": 3 },
+      "encoding": {
+        "x": { "field": "year", "type": "ordinal", "axis": { "title": null } },
+        "y": {
+          "field": "visitors",
+          "type": "quantitative",
+          "stack": "normalize",
+          "axis": { "title": "Share of special-event visitors", "format": ".0%" }
+        },
+        "color": {
+          "field": "origin",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Interstate", "Overseas"],
+            "range": ["#007a63", "#f0c419"]
+          },
+          "legend": { "title": "Visitor origin" }
+        },
+        "tooltip": [
+          { "field": "year" },
+          { "field": "origin" },
+          { "field": "visitors", "format": "," },
+          { "field": "share_label", "title": "Share" },
+          { "field": "year_total", "title": "Total visitors", "format": "," }
+        ]
+      }
+    },
+    {
+      "transform": [{ "filter": "datum.origin === 'Overseas'" }],
+      "mark": {
+        "type": "text",
+        "dy": -8,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "fontFamily": "Titillium Web",
+        "color": "#14181c"
+      },
+      "encoding": {
+        "x": { "field": "year", "type": "ordinal" },
+        "y": {
+          "field": "visitors",
+          "type": "quantitative",
+          "stack": "normalize"
+        },
+        "text": { "field": "share_label" }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          { "year": 2025, "label": "Overseas visitors tripled since 2022" }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -6,
+        "dy": -28,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "fontFamily": "Titillium Web",
+        "color": "#e10600"
+      },
+      "encoding": {
+        "x": { "field": "year", "type": "ordinal" },
+        "y": { "value": 0 },
+        "text": { "field": "label" }
+      }
+    }
+  ]
+}

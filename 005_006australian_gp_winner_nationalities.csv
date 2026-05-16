@@ -1,0 +1,12 @@
+nationality,wins,unique_winning_drivers,drivers,country_name,iso_num,x,y,x2,y2,label_x,country_y,wins_y,wins_label,text_color
+British,11,6,Damon Hill; David Coulthard; Eddie Irvine; Jenson Button; Lewis Hamilton; Nigel Mansell,United Kingdom,826,0.0612,35,0.3153,335,0.0735,60,85,11 wins,#ffffff
+German,9,3,Michael Schumacher; Nico Rosberg; Sebastian Vettel,Germany,276,0.3153,35,0.5231,335,0.3275,60,85,9 wins,#ffffff
+Finnish,5,4,Keke Rosberg; Kimi Räikkönen; Mika Häkkinen; Valtteri Bottas,Finland,246,0.5231,35,0.7079,222.5,0.5354,60,85,5 wins,#ffffff
+Brazilian,3,2,Ayrton Senna; Nelson Piquet,Brazil,76,0.5231,222.5,0.7079,335,0.5354,247,272,3 wins,#1f2428
+Spanish,2,2,Carlos Sainz; Fernando Alonso,Spain,724,0.7079,35,0.8233,155,0.7201,72,100,2 wins,#1f2428
+Austrian,2,1,Gerhard Berger,Austria,40,0.8233,35,0.9388,155,0.8356,72,100,2 wins,#1f2428
+French,2,1,Alain Prost,France,250,0.7079,155,0.8233,275,0.7201,192,220,2 wins,#1f2428
+Belgian,1,1,Thierry Boutsen,Belgium,56,0.7079,275,0.8233,335,0.7201,295,318,1 win,#1f2428
+Dutch,1,1,Max Verstappen,Netherlands,528,0.8233,155,0.9388,215,0.8356,175,198,1 win,#1f2428
+Italian,1,1,Giancarlo Fisichella,Italy,380,0.8233,215,0.9388,275,0.8356,235,258,1 win,#1f2428
+Monegasque,1,1,Charles Leclerc,Monaco,492,0.8233,275,0.9388,335,0.8356,295,318,1 win,#1f2428

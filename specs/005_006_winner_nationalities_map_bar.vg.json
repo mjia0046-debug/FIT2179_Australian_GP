@@ -1,0 +1,483 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "datasets": {
+    "winner_driver_details": [
+      {
+        "country_name": "Austria",
+        "driver": "Gerhard Berger",
+        "driver_nationality": "Austrian",
+        "wins": 2,
+        "winning_years": "1987, 1992",
+        "constructors": "Ferrari; McLaren",
+        "profile": "Austrian winner for Ferrari and McLaren in the Adelaide years."
+      },
+      {
+        "country_name": "Belgium",
+        "driver": "Thierry Boutsen",
+        "driver_nationality": "Belgian",
+        "wins": 1,
+        "winning_years": "1989",
+        "constructors": "Williams",
+        "profile": "Belgian winner for Williams in the late Adelaide period."
+      },
+      {
+        "country_name": "Brazil",
+        "driver": "Ayrton Senna",
+        "driver_nationality": "Brazilian",
+        "wins": 2,
+        "winning_years": "1991, 1993",
+        "constructors": "McLaren",
+        "profile": "Brazilian icon and multiple Australian GP winner in the Adelaide era."
+      },
+      {
+        "country_name": "Brazil",
+        "driver": "Nelson Piquet",
+        "driver_nationality": "Brazilian",
+        "wins": 1,
+        "winning_years": "1990",
+        "constructors": "Benetton",
+        "profile": "Brazilian world champion and Benetton winner in Adelaide."
+      },
+      {
+        "country_name": "Finland",
+        "driver": "Kimi Räikkönen",
+        "driver_nationality": "Finnish",
+        "wins": 2,
+        "winning_years": "2007, 2013",
+        "constructors": "Ferrari; Lotus F1",
+        "profile": "Finnish world champion with Australian GP wins for Ferrari and Lotus."
+      },
+      {
+        "country_name": "Finland",
+        "driver": "Keke Rosberg",
+        "driver_nationality": "Finnish",
+        "wins": 1,
+        "winning_years": "1985",
+        "constructors": "Williams",
+        "profile": "1982 world champion and winner of the first Adelaide-era Australian GP in this dataset."
+      },
+      {
+        "country_name": "Finland",
+        "driver": "Mika Häkkinen",
+        "driver_nationality": "Finnish",
+        "wins": 1,
+        "winning_years": "1998",
+        "constructors": "McLaren",
+        "profile": "Two-time world champion and McLaren winner in Melbourne."
+      },
+      {
+        "country_name": "Finland",
+        "driver": "Valtteri Bottas",
+        "driver_nationality": "Finnish",
+        "wins": 1,
+        "winning_years": "2019",
+        "constructors": "Mercedes",
+        "profile": "Mercedes winner whose 2019 victory capped the pre-pandemic Melbourne era."
+      },
+      {
+        "country_name": "France",
+        "driver": "Alain Prost",
+        "driver_nationality": "French",
+        "wins": 2,
+        "winning_years": "1986, 1988",
+        "constructors": "McLaren",
+        "profile": "French world champion and multiple Australian GP winner."
+      },
+      {
+        "country_name": "Germany",
+        "driver": "Michael Schumacher",
+        "driver_nationality": "German",
+        "wins": 4,
+        "winning_years": "2000, 2001, 2002, 2004",
+        "constructors": "Ferrari",
+        "profile": "Ferrari-era benchmark whose Australian GP wins shaped the early 2000s."
+      },
+      {
+        "country_name": "Germany",
+        "driver": "Sebastian Vettel",
+        "driver_nationality": "German",
+        "wins": 3,
+        "winning_years": "2011, 2017, 2018",
+        "constructors": "Ferrari; Red Bull",
+        "profile": "Multiple Australian GP winner across Red Bull and Ferrari chapters."
+      },
+      {
+        "country_name": "Germany",
+        "driver": "Nico Rosberg",
+        "driver_nationality": "German",
+        "wins": 2,
+        "winning_years": "2014, 2016",
+        "constructors": "Mercedes",
+        "profile": "German world champion and Mercedes winner in the hybrid-era Melbourne story."
+      },
+      {
+        "country_name": "Italy",
+        "driver": "Giancarlo Fisichella",
+        "driver_nationality": "Italian",
+        "wins": 1,
+        "winning_years": "2005",
+        "constructors": "Renault",
+        "profile": "Italian Renault winner in Melbourne."
+      },
+      {
+        "country_name": "Monaco",
+        "driver": "Charles Leclerc",
+        "driver_nationality": "Monegasque",
+        "wins": 1,
+        "winning_years": "2022",
+        "constructors": "Ferrari",
+        "profile": "Monegasque Ferrari winner in the post-pandemic Melbourne era."
+      },
+      {
+        "country_name": "Netherlands",
+        "driver": "Max Verstappen",
+        "driver_nationality": "Dutch",
+        "wins": 1,
+        "winning_years": "2023",
+        "constructors": "Red Bull",
+        "profile": "Dutch world champion and Red Bull winner at the Australian GP."
+      },
+      {
+        "country_name": "Spain",
+        "driver": "Carlos Sainz",
+        "driver_nationality": "Spanish",
+        "wins": 1,
+        "winning_years": "2024",
+        "constructors": "Ferrari",
+        "profile": "Ferrari winner in the post-pandemic Melbourne return period."
+      },
+      {
+        "country_name": "Spain",
+        "driver": "Fernando Alonso",
+        "driver_nationality": "Spanish",
+        "wins": 1,
+        "winning_years": "2006",
+        "constructors": "Renault",
+        "profile": "Spanish world champion and Renault winner at the Australian GP."
+      },
+      {
+        "country_name": "United Kingdom",
+        "driver": "Jenson Button",
+        "driver_nationality": "British",
+        "wins": 3,
+        "winning_years": "2009, 2010, 2012",
+        "constructors": "Brawn; McLaren",
+        "profile": "Three-time Australian GP winner across Brawn's breakthrough and McLaren's early-2010s strength."
+      },
+      {
+        "country_name": "United Kingdom",
+        "driver": "Damon Hill",
+        "driver_nationality": "British",
+        "wins": 2,
+        "winning_years": "1995, 1996",
+        "constructors": "Williams",
+        "profile": "British world champion whose Australian GP wins helped define the early Melbourne era."
+      },
+      {
+        "country_name": "United Kingdom",
+        "driver": "David Coulthard",
+        "driver_nationality": "British",
+        "wins": 2,
+        "winning_years": "1997, 2003",
+        "constructors": "McLaren",
+        "profile": "A McLaren winner in Melbourne, linking the race to the late-1990s British F1 generation."
+      },
+      {
+        "country_name": "United Kingdom",
+        "driver": "Lewis Hamilton",
+        "driver_nationality": "British",
+        "wins": 2,
+        "winning_years": "2008, 2015",
+        "constructors": "McLaren; Mercedes",
+        "profile": "Seven-time world champion and Australian GP winner for McLaren."
+      },
+      {
+        "country_name": "United Kingdom",
+        "driver": "Eddie Irvine",
+        "driver_nationality": "British",
+        "wins": 1,
+        "winning_years": "1999",
+        "constructors": "Ferrari",
+        "profile": "Ferrari's 1999 Australian GP winner during a dramatic championship-contending season."
+      },
+      {
+        "country_name": "United Kingdom",
+        "driver": "Nigel Mansell",
+        "driver_nationality": "British",
+        "wins": 1,
+        "winning_years": "1994",
+        "constructors": "Williams",
+        "profile": "British champion and winner of the final Adelaide-era Australian GP in 1994."
+      }
+    ]
+  },
+  "data": {
+    "values": [
+      {
+        "nationality": "British",
+        "wins": 11,
+        "unique_winning_drivers": 6,
+        "drivers": "Damon Hill; David Coulthard; Eddie Irvine; Jenson Button; Lewis Hamilton; Nigel Mansell",
+        "country_name": "United Kingdom",
+        "iso_num": 826,
+        "x": 0.0612,
+        "y": 35,
+        "x2": 0.3153,
+        "y2": 335,
+        "label_x": 0.0735,
+        "country_y": 60,
+        "wins_y": 85,
+        "wins_label": "11 wins",
+        "text_color": "#ffffff"
+      },
+      {
+        "nationality": "German",
+        "wins": 9,
+        "unique_winning_drivers": 3,
+        "drivers": "Michael Schumacher; Nico Rosberg; Sebastian Vettel",
+        "country_name": "Germany",
+        "iso_num": 276,
+        "x": 0.3153,
+        "y": 35,
+        "x2": 0.5231,
+        "y2": 335,
+        "label_x": 0.3275,
+        "country_y": 60,
+        "wins_y": 85,
+        "wins_label": "9 wins",
+        "text_color": "#ffffff"
+      },
+      {
+        "nationality": "Finnish",
+        "wins": 5,
+        "unique_winning_drivers": 4,
+        "drivers": "Keke Rosberg; Kimi Räikkönen; Mika Häkkinen; Valtteri Bottas",
+        "country_name": "Finland",
+        "iso_num": 246,
+        "x": 0.5231,
+        "y": 35,
+        "x2": 0.7079,
+        "y2": 222.5,
+        "label_x": 0.5354,
+        "country_y": 60,
+        "wins_y": 85,
+        "wins_label": "5 wins",
+        "text_color": "#ffffff"
+      },
+      {
+        "nationality": "Brazilian",
+        "wins": 3,
+        "unique_winning_drivers": 2,
+        "drivers": "Ayrton Senna; Nelson Piquet",
+        "country_name": "Brazil",
+        "iso_num": 76,
+        "x": 0.5231,
+        "y": 222.5,
+        "x2": 0.7079,
+        "y2": 335.0,
+        "label_x": 0.5354,
+        "country_y": 247,
+        "wins_y": 272,
+        "wins_label": "3 wins",
+        "text_color": "#1f2428"
+      },
+      {
+        "nationality": "Spanish",
+        "wins": 2,
+        "unique_winning_drivers": 2,
+        "drivers": "Carlos Sainz; Fernando Alonso",
+        "country_name": "Spain",
+        "iso_num": 724,
+        "x": 0.7079,
+        "y": 35,
+        "x2": 0.8233,
+        "y2": 155.0,
+        "label_x": 0.7201,
+        "country_y": 72,
+        "wins_y": 100,
+        "wins_label": "2 wins",
+        "text_color": "#1f2428"
+      },
+      {
+        "nationality": "Austrian",
+        "wins": 2,
+        "unique_winning_drivers": 1,
+        "drivers": "Gerhard Berger",
+        "country_name": "Austria",
+        "iso_num": 40,
+        "x": 0.8233,
+        "y": 35,
+        "x2": 0.9388,
+        "y2": 155.0,
+        "label_x": 0.8356,
+        "country_y": 72,
+        "wins_y": 100,
+        "wins_label": "2 wins",
+        "text_color": "#1f2428"
+      },
+      {
+        "nationality": "French",
+        "wins": 2,
+        "unique_winning_drivers": 1,
+        "drivers": "Alain Prost",
+        "country_name": "France",
+        "iso_num": 250,
+        "x": 0.7079,
+        "y": 155.0,
+        "x2": 0.8233,
+        "y2": 275.0,
+        "label_x": 0.7201,
+        "country_y": 192,
+        "wins_y": 220,
+        "wins_label": "2 wins",
+        "text_color": "#1f2428"
+      },
+      {
+        "nationality": "Belgian",
+        "wins": 1,
+        "unique_winning_drivers": 1,
+        "drivers": "Thierry Boutsen",
+        "country_name": "Belgium",
+        "iso_num": 56,
+        "x": 0.7079,
+        "y": 275.0,
+        "x2": 0.8233,
+        "y2": 335.0,
+        "label_x": 0.7201,
+        "country_y": 295,
+        "wins_y": 318,
+        "wins_label": "1 win",
+        "text_color": "#1f2428"
+      },
+      {
+        "nationality": "Dutch",
+        "wins": 1,
+        "unique_winning_drivers": 1,
+        "drivers": "Max Verstappen",
+        "country_name": "Netherlands",
+        "iso_num": 528,
+        "x": 0.8233,
+        "y": 155.0,
+        "x2": 0.9388,
+        "y2": 215.0,
+        "label_x": 0.8356,
+        "country_y": 175,
+        "wins_y": 198,
+        "wins_label": "1 win",
+        "text_color": "#1f2428"
+      },
+      {
+        "nationality": "Italian",
+        "wins": 1,
+        "unique_winning_drivers": 1,
+        "drivers": "Giancarlo Fisichella",
+        "country_name": "Italy",
+        "iso_num": 380,
+        "x": 0.8233,
+        "y": 215.0,
+        "x2": 0.9388,
+        "y2": 275.0,
+        "label_x": 0.8356,
+        "country_y": 235,
+        "wins_y": 258,
+        "wins_label": "1 win",
+        "text_color": "#1f2428"
+      },
+      {
+        "nationality": "Monegasque",
+        "wins": 1,
+        "unique_winning_drivers": 1,
+        "drivers": "Charles Leclerc",
+        "country_name": "Monaco",
+        "iso_num": 492,
+        "x": 0.8233,
+        "y": 275.0,
+        "x2": 0.9388,
+        "y2": 335.0,
+        "label_x": 0.8356,
+        "country_y": 295,
+        "wins_y": 318,
+        "wins_label": "1 win",
+        "text_color": "#1f2428"
+      }
+    ]
+  },
+  "width": "container",
+  "height": 360,
+  "resolve": {
+    "scale": {
+      "color": "independent"
+    }
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5d6670",
+      "titleColor": "#30353b",
+      "gridColor": "#e6e8e3",
+      "domainColor": "#cfd4ce",
+      "tickColor": "#cfd4ce"
+    },
+    "legend": {
+      "labelColor": "#30353b",
+      "titleColor": "#30353b",
+      "orient": "bottom"
+    },
+    "font": "Inter"
+  },
+  "layer": [
+    {
+      "mark": {"type": "rect", "stroke": "#ffffff", "strokeWidth": 2, "cursor": "pointer"},
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative", "axis": null, "scale": {"domain": [0, 1]}},
+        "x2": {"field": "x2"},
+        "y": {"field": "y", "type": "quantitative", "axis": null},
+        "y2": {"field": "y2"},
+        "color": {"field": "wins", "type": "quantitative", "scale": {"scheme": "tealblues", "domain": [1, 11]}, "legend": {"title": "Wins"}},
+        "tooltip": [{"field": "country_name", "title": "Country"}, {"field": "wins", "title": "Australian GP wins"}, {"field": "drivers", "title": "Winning drivers"}]
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "baseline": "middle", "fontSize": 11, "fontWeight": "bold", "limit": 110},
+      "encoding": {
+        "x": {"field": "label_x", "type": "quantitative", "axis": null, "scale": {"domain": [0, 1]}},
+        "y": {"field": "country_y", "type": "quantitative", "axis": null},
+        "text": {"field": "country_name"},
+        "color": {"field": "text_color", "type": "nominal", "scale": null}
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "baseline": "middle", "fontSize": 14, "fontWeight": "bold", "limit": 90},
+      "encoding": {
+        "x": {"field": "label_x", "type": "quantitative", "axis": null, "scale": {"domain": [0, 1]}},
+        "y": {"field": "wins_y", "type": "quantitative", "axis": null},
+        "text": {"field": "wins_label"},
+        "color": {"field": "text_color", "type": "nominal", "scale": null}
+      }
+    },
+    {
+      "data": {
+        "values": [{"x": 0.0735, "y": 310, "label": "UK + Germany = 20 of 38 wins (53%)"}]
+      },
+      "mark": {"type": "text", "align": "left", "fontSize": 11, "fontWeight": 600, "fontFamily": "Titillium Web", "color": "#ffffff"},
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative", "axis": null, "scale": {"domain": [0, 1]}},
+        "y": {"field": "y", "type": "quantitative", "axis": null},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "data": {
+        "values": [{"x": 0.5354, "y": 200, "label": "Finland: 4 different winners"}]
+      },
+      "mark": {"type": "text", "align": "left", "fontSize": 9.5, "fontWeight": 600, "fontFamily": "Titillium Web", "color": "#ffffff"},
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative", "axis": null, "scale": {"domain": [0, 1]}},
+        "y": {"field": "y", "type": "quantitative", "axis": null},
+        "text": {"field": "label"}
+      }
+    }
+  ]
+}

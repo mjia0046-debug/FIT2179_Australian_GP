@@ -1,0 +1,1098 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 300,
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5d6670",
+      "titleColor": "#30353b",
+      "gridColor": "#e6e8e3",
+      "domainColor": "#cfd4ce",
+      "tickColor": "#cfd4ce"
+    },
+    "legend": {
+      "labelColor": "#30353b",
+      "titleColor": "#30353b",
+      "orient": "bottom"
+    },
+    "font": "Inter"
+  },
+  "projection": {
+    "type": "equalEarth"
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "countries"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e4e6e1",
+        "stroke": "#ffffff"
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "circuitId": 25,
+            "circuit_name": "Autódromo Juan y Oscar Gálvez",
+            "location": "Buenos Aires",
+            "country": "Argentina",
+            "lat": -34.6943,
+            "lng": -58.4593,
+            "race_count": 20,
+            "first_year": 1953,
+            "last_year": 1998,
+            "is_australia": false
+          },
+          {
+            "circuitId": 29,
+            "circuit_name": "Adelaide Street Circuit",
+            "location": "Adelaide",
+            "country": "Australia",
+            "lat": -34.9272,
+            "lng": 138.617,
+            "race_count": 11,
+            "first_year": 1985,
+            "last_year": 1995,
+            "is_australia": true
+          },
+          {
+            "circuitId": 1,
+            "circuit_name": "Albert Park Grand Prix Circuit",
+            "location": "Melbourne",
+            "country": "Australia",
+            "lat": -37.8497,
+            "lng": 144.968,
+            "race_count": 27,
+            "first_year": 1996,
+            "last_year": 2024,
+            "is_australia": true
+          },
+          {
+            "circuitId": 70,
+            "circuit_name": "Red Bull Ring",
+            "location": "Spielberg",
+            "country": "Austria",
+            "lat": 47.2197,
+            "lng": 14.7647,
+            "race_count": 38,
+            "first_year": 1970,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 57,
+            "circuit_name": "Zeltweg",
+            "location": "Styria",
+            "country": "Austria",
+            "lat": 47.2039,
+            "lng": 14.7478,
+            "race_count": 1,
+            "first_year": 1964,
+            "last_year": 1964,
+            "is_australia": false
+          },
+          {
+            "circuitId": 73,
+            "circuit_name": "Baku City Circuit",
+            "location": "Baku",
+            "country": "Azerbaijan",
+            "lat": 40.3725,
+            "lng": 49.8533,
+            "race_count": 8,
+            "first_year": 2016,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 3,
+            "circuit_name": "Bahrain International Circuit",
+            "location": "Sakhir",
+            "country": "Bahrain",
+            "lat": 26.0325,
+            "lng": 50.5106,
+            "race_count": 21,
+            "first_year": 2004,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 50,
+            "circuit_name": "Nivelles-Baulers",
+            "location": "Brussels",
+            "country": "Belgium",
+            "lat": 50.6211,
+            "lng": 4.32694,
+            "race_count": 2,
+            "first_year": 1972,
+            "last_year": 1974,
+            "is_australia": false
+          },
+          {
+            "circuitId": 40,
+            "circuit_name": "Zolder",
+            "location": "Heusden-Zolder",
+            "country": "Belgium",
+            "lat": 50.9894,
+            "lng": 5.25694,
+            "race_count": 10,
+            "first_year": 1973,
+            "last_year": 1984,
+            "is_australia": false
+          },
+          {
+            "circuitId": 13,
+            "circuit_name": "Circuit de Spa-Francorchamps",
+            "location": "Spa",
+            "country": "Belgium",
+            "lat": 50.4372,
+            "lng": 5.97139,
+            "race_count": 57,
+            "first_year": 1950,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 36,
+            "circuit_name": "Autódromo Internacional Nelson Piquet",
+            "location": "Rio de Janeiro",
+            "country": "Brazil",
+            "lat": -22.9756,
+            "lng": -43.395,
+            "race_count": 10,
+            "first_year": 1978,
+            "last_year": 1989,
+            "is_australia": false
+          },
+          {
+            "circuitId": 18,
+            "circuit_name": "Autódromo José Carlos Pace",
+            "location": "São Paulo",
+            "country": "Brazil",
+            "lat": -23.7036,
+            "lng": -46.6997,
+            "race_count": 41,
+            "first_year": 1973,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 7,
+            "circuit_name": "Circuit Gilles Villeneuve",
+            "location": "Montreal",
+            "country": "Canada",
+            "lat": 45.5,
+            "lng": -73.5228,
+            "race_count": 43,
+            "first_year": 1978,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 48,
+            "circuit_name": "Mosport International Raceway",
+            "location": "Ontario",
+            "country": "Canada",
+            "lat": 44.0481,
+            "lng": -78.6756,
+            "race_count": 8,
+            "first_year": 1967,
+            "last_year": 1977,
+            "is_australia": false
+          },
+          {
+            "circuitId": 52,
+            "circuit_name": "Circuit Mont-Tremblant",
+            "location": "Quebec",
+            "country": "Canada",
+            "lat": 46.1877,
+            "lng": -74.6099,
+            "race_count": 2,
+            "first_year": 1968,
+            "last_year": 1970,
+            "is_australia": false
+          },
+          {
+            "circuitId": 17,
+            "circuit_name": "Shanghai International Circuit",
+            "location": "Shanghai",
+            "country": "China",
+            "lat": 31.3389,
+            "lng": 121.22,
+            "race_count": 17,
+            "first_year": 2004,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 51,
+            "circuit_name": "Charade Circuit",
+            "location": "Clermont-Ferrand",
+            "country": "France",
+            "lat": 45.7472,
+            "lng": 3.03889,
+            "race_count": 4,
+            "first_year": 1965,
+            "last_year": 1972,
+            "is_australia": false
+          },
+          {
+            "circuitId": 41,
+            "circuit_name": "Dijon-Prenois",
+            "location": "Dijon",
+            "country": "France",
+            "lat": 47.3625,
+            "lng": 4.89913,
+            "race_count": 6,
+            "first_year": 1974,
+            "last_year": 1984,
+            "is_australia": false
+          },
+          {
+            "circuitId": 34,
+            "circuit_name": "Circuit Paul Ricard",
+            "location": "Le Castellet",
+            "country": "France",
+            "lat": 43.2506,
+            "lng": 5.79167,
+            "race_count": 18,
+            "first_year": 1971,
+            "last_year": 2022,
+            "is_australia": false
+          },
+          {
+            "circuitId": 54,
+            "circuit_name": "Le Mans",
+            "location": "Le Mans",
+            "country": "France",
+            "lat": 47.95,
+            "lng": 0.224231,
+            "race_count": 1,
+            "first_year": 1967,
+            "last_year": 1967,
+            "is_australia": false
+          },
+          {
+            "circuitId": 8,
+            "circuit_name": "Circuit de Nevers Magny-Cours",
+            "location": "Magny Cours",
+            "country": "France",
+            "lat": 46.8642,
+            "lng": 3.16361,
+            "race_count": 18,
+            "first_year": 1991,
+            "last_year": 2008,
+            "is_australia": false
+          },
+          {
+            "circuitId": 55,
+            "circuit_name": "Reims-Gueux",
+            "location": "Reims",
+            "country": "France",
+            "lat": 49.2542,
+            "lng": 3.93083,
+            "race_count": 11,
+            "first_year": 1950,
+            "last_year": 1966,
+            "is_australia": false
+          },
+          {
+            "circuitId": 53,
+            "circuit_name": "Rouen-Les-Essarts",
+            "location": "Rouen",
+            "country": "France",
+            "lat": 49.3306,
+            "lng": 1.00458,
+            "race_count": 5,
+            "first_year": 1952,
+            "last_year": 1968,
+            "is_australia": false
+          },
+          {
+            "circuitId": 61,
+            "circuit_name": "AVUS",
+            "location": "Berlin",
+            "country": "Germany",
+            "lat": 52.4806,
+            "lng": 13.2514,
+            "race_count": 1,
+            "first_year": 1959,
+            "last_year": 1959,
+            "is_australia": false
+          },
+          {
+            "circuitId": 10,
+            "circuit_name": "Hockenheimring",
+            "location": "Hockenheim",
+            "country": "Germany",
+            "lat": 49.3278,
+            "lng": 8.56583,
+            "race_count": 37,
+            "first_year": 1970,
+            "last_year": 2019,
+            "is_australia": false
+          },
+          {
+            "circuitId": 20,
+            "circuit_name": "Nürburgring",
+            "location": "Nürburg",
+            "country": "Germany",
+            "lat": 50.3356,
+            "lng": 6.9475,
+            "race_count": 41,
+            "first_year": 1951,
+            "last_year": 2020,
+            "is_australia": false
+          },
+          {
+            "circuitId": 11,
+            "circuit_name": "Hungaroring",
+            "location": "Budapest",
+            "country": "Hungary",
+            "lat": 47.5789,
+            "lng": 19.2486,
+            "race_count": 39,
+            "first_year": 1986,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 68,
+            "circuit_name": "Buddh International Circuit",
+            "location": "Uttar Pradesh",
+            "country": "India",
+            "lat": 28.3487,
+            "lng": 77.5331,
+            "race_count": 3,
+            "first_year": 2011,
+            "last_year": 2013,
+            "is_australia": false
+          },
+          {
+            "circuitId": 21,
+            "circuit_name": "Autodromo Enzo e Dino Ferrari",
+            "location": "Imola",
+            "country": "Italy",
+            "lat": 44.3439,
+            "lng": 11.7167,
+            "race_count": 31,
+            "first_year": 1980,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 14,
+            "circuit_name": "Autodromo Nazionale di Monza",
+            "location": "Monza",
+            "country": "Italy",
+            "lat": 45.6156,
+            "lng": 9.28111,
+            "race_count": 74,
+            "first_year": 1950,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 76,
+            "circuit_name": "Autodromo Internazionale del Mugello",
+            "location": "Mugello",
+            "country": "Italy",
+            "lat": 43.9975,
+            "lng": 11.3719,
+            "race_count": 1,
+            "first_year": 2020,
+            "last_year": 2020,
+            "is_australia": false
+          },
+          {
+            "circuitId": 65,
+            "circuit_name": "Pescara Circuit",
+            "location": "Pescara",
+            "country": "Italy",
+            "lat": 42.475,
+            "lng": 14.1508,
+            "race_count": 1,
+            "first_year": 1957,
+            "last_year": 1957,
+            "is_australia": false
+          },
+          {
+            "circuitId": 28,
+            "circuit_name": "Okayama International Circuit",
+            "location": "Okayama",
+            "country": "Japan",
+            "lat": 34.915,
+            "lng": 134.221,
+            "race_count": 2,
+            "first_year": 1994,
+            "last_year": 1995,
+            "is_australia": false
+          },
+          {
+            "circuitId": 16,
+            "circuit_name": "Fuji Speedway",
+            "location": "Oyama",
+            "country": "Japan",
+            "lat": 35.3717,
+            "lng": 138.927,
+            "race_count": 4,
+            "first_year": 1976,
+            "last_year": 2008,
+            "is_australia": false
+          },
+          {
+            "circuitId": 22,
+            "circuit_name": "Suzuka Circuit",
+            "location": "Suzuka",
+            "country": "Japan",
+            "lat": 34.8431,
+            "lng": 136.541,
+            "race_count": 34,
+            "first_year": 1987,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 35,
+            "circuit_name": "Korean International Circuit",
+            "location": "Yeongam County",
+            "country": "Korea",
+            "lat": 34.7333,
+            "lng": 126.417,
+            "race_count": 4,
+            "first_year": 2010,
+            "last_year": 2013,
+            "is_australia": false
+          },
+          {
+            "circuitId": 2,
+            "circuit_name": "Sepang International Circuit",
+            "location": "Kuala Lumpur",
+            "country": "Malaysia",
+            "lat": 2.76083,
+            "lng": 101.738,
+            "race_count": 19,
+            "first_year": 1999,
+            "last_year": 2017,
+            "is_australia": false
+          },
+          {
+            "circuitId": 32,
+            "circuit_name": "Autódromo Hermanos Rodríguez",
+            "location": "Mexico City",
+            "country": "Mexico",
+            "lat": 19.4042,
+            "lng": -99.0907,
+            "race_count": 24,
+            "first_year": 1963,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 6,
+            "circuit_name": "Circuit de Monaco",
+            "location": "Monte-Carlo",
+            "country": "Monaco",
+            "lat": 43.7347,
+            "lng": 7.42056,
+            "race_count": 70,
+            "first_year": 1950,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 64,
+            "circuit_name": "Ain Diab",
+            "location": "Casablanca",
+            "country": "Morocco",
+            "lat": 33.5786,
+            "lng": -7.6875,
+            "race_count": 1,
+            "first_year": 1958,
+            "last_year": 1958,
+            "is_australia": false
+          },
+          {
+            "circuitId": 39,
+            "circuit_name": "Circuit Park Zandvoort",
+            "location": "Zandvoort",
+            "country": "Netherlands",
+            "lat": 52.3888,
+            "lng": 4.54092,
+            "race_count": 34,
+            "first_year": 1952,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 27,
+            "circuit_name": "Autódromo do Estoril",
+            "location": "Estoril",
+            "country": "Portugal",
+            "lat": 38.7506,
+            "lng": -9.39417,
+            "race_count": 13,
+            "first_year": 1984,
+            "last_year": 1996,
+            "is_australia": false
+          },
+          {
+            "circuitId": 62,
+            "circuit_name": "Monsanto Park Circuit",
+            "location": "Lisbon",
+            "country": "Portugal",
+            "lat": 38.7197,
+            "lng": -9.20306,
+            "race_count": 1,
+            "first_year": 1959,
+            "last_year": 1959,
+            "is_australia": false
+          },
+          {
+            "circuitId": 59,
+            "circuit_name": "Circuito da Boavista",
+            "location": "Oporto",
+            "country": "Portugal",
+            "lat": 41.1705,
+            "lng": -8.67325,
+            "race_count": 2,
+            "first_year": 1958,
+            "last_year": 1960,
+            "is_australia": false
+          },
+          {
+            "circuitId": 75,
+            "circuit_name": "Autódromo Internacional do Algarve",
+            "location": "Portimão",
+            "country": "Portugal",
+            "lat": 37.227,
+            "lng": -8.6267,
+            "race_count": 2,
+            "first_year": 2020,
+            "last_year": 2021,
+            "is_australia": false
+          },
+          {
+            "circuitId": 78,
+            "circuit_name": "Losail International Circuit",
+            "location": "Al Daayen",
+            "country": "Qatar",
+            "lat": 25.49,
+            "lng": 51.4542,
+            "race_count": 3,
+            "first_year": 2021,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 71,
+            "circuit_name": "Sochi Autodrom",
+            "location": "Sochi",
+            "country": "Russia",
+            "lat": 43.4057,
+            "lng": 39.9578,
+            "race_count": 8,
+            "first_year": 2014,
+            "last_year": 2021,
+            "is_australia": false
+          },
+          {
+            "circuitId": 77,
+            "circuit_name": "Jeddah Corniche Circuit",
+            "location": "Jeddah",
+            "country": "Saudi Arabia",
+            "lat": 21.6319,
+            "lng": 39.1044,
+            "race_count": 4,
+            "first_year": 2021,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 15,
+            "circuit_name": "Marina Bay Street Circuit",
+            "location": "Marina Bay",
+            "country": "Singapore",
+            "lat": 1.2914,
+            "lng": 103.864,
+            "race_count": 15,
+            "first_year": 2008,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 56,
+            "circuit_name": "Prince George Circuit",
+            "location": "Eastern Cape Province",
+            "country": "South Africa",
+            "lat": -33.0486,
+            "lng": 27.8736,
+            "race_count": 3,
+            "first_year": 1962,
+            "last_year": 1965,
+            "is_australia": false
+          },
+          {
+            "circuitId": 30,
+            "circuit_name": "Kyalami",
+            "location": "Midrand",
+            "country": "South Africa",
+            "lat": -25.9894,
+            "lng": 28.0767,
+            "race_count": 20,
+            "first_year": 1967,
+            "last_year": 1993,
+            "is_australia": false
+          },
+          {
+            "circuitId": 67,
+            "circuit_name": "Circuit de Pedralbes",
+            "location": "Barcelona",
+            "country": "Spain",
+            "lat": 41.3903,
+            "lng": 2.11667,
+            "race_count": 2,
+            "first_year": 1951,
+            "last_year": 1954,
+            "is_australia": false
+          },
+          {
+            "circuitId": 49,
+            "circuit_name": "Montjuïc",
+            "location": "Barcelona",
+            "country": "Spain",
+            "lat": 41.3664,
+            "lng": 2.15167,
+            "race_count": 4,
+            "first_year": 1969,
+            "last_year": 1975,
+            "is_australia": false
+          },
+          {
+            "circuitId": 26,
+            "circuit_name": "Circuito de Jerez",
+            "location": "Jerez de la Frontera",
+            "country": "Spain",
+            "lat": 36.7083,
+            "lng": -6.03417,
+            "race_count": 7,
+            "first_year": 1986,
+            "last_year": 1997,
+            "is_australia": false
+          },
+          {
+            "circuitId": 45,
+            "circuit_name": "Jarama",
+            "location": "Madrid",
+            "country": "Spain",
+            "lat": 40.6171,
+            "lng": -3.58558,
+            "race_count": 9,
+            "first_year": 1968,
+            "last_year": 1981,
+            "is_australia": false
+          },
+          {
+            "circuitId": 4,
+            "circuit_name": "Circuit de Barcelona-Catalunya",
+            "location": "Montmeló",
+            "country": "Spain",
+            "lat": 41.57,
+            "lng": 2.26111,
+            "race_count": 34,
+            "first_year": 1991,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 12,
+            "circuit_name": "Valencia Street Circuit",
+            "location": "Valencia",
+            "country": "Spain",
+            "lat": 39.4589,
+            "lng": -0.331667,
+            "race_count": 5,
+            "first_year": 2008,
+            "last_year": 2012,
+            "is_australia": false
+          },
+          {
+            "circuitId": 47,
+            "circuit_name": "Scandinavian Raceway",
+            "location": "Anderstorp",
+            "country": "Sweden",
+            "lat": 57.2653,
+            "lng": 13.6042,
+            "race_count": 6,
+            "first_year": 1973,
+            "last_year": 1978,
+            "is_australia": false
+          },
+          {
+            "circuitId": 66,
+            "circuit_name": "Circuit Bremgarten",
+            "location": "Bern",
+            "country": "Switzerland",
+            "lat": 46.9589,
+            "lng": 7.40194,
+            "race_count": 5,
+            "first_year": 1950,
+            "last_year": 1954,
+            "is_australia": false
+          },
+          {
+            "circuitId": 5,
+            "circuit_name": "Istanbul Park",
+            "location": "Istanbul",
+            "country": "Turkey",
+            "lat": 40.9517,
+            "lng": 29.405,
+            "race_count": 9,
+            "first_year": 2005,
+            "last_year": 2021,
+            "is_australia": false
+          },
+          {
+            "circuitId": 24,
+            "circuit_name": "Yas Marina Circuit",
+            "location": "Abu Dhabi",
+            "country": "UAE",
+            "lat": 24.4672,
+            "lng": 54.6031,
+            "race_count": 16,
+            "first_year": 2009,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 31,
+            "circuit_name": "Donington Park",
+            "location": "Castle Donington",
+            "country": "UK",
+            "lat": 52.8306,
+            "lng": -1.37528,
+            "race_count": 1,
+            "first_year": 1993,
+            "last_year": 1993,
+            "is_australia": false
+          },
+          {
+            "circuitId": 38,
+            "circuit_name": "Brands Hatch",
+            "location": "Kent",
+            "country": "UK",
+            "lat": 51.3569,
+            "lng": 0.263056,
+            "race_count": 14,
+            "first_year": 1964,
+            "last_year": 1986,
+            "is_australia": false
+          },
+          {
+            "circuitId": 58,
+            "circuit_name": "Aintree",
+            "location": "Liverpool",
+            "country": "UK",
+            "lat": 53.4769,
+            "lng": -2.94056,
+            "race_count": 5,
+            "first_year": 1955,
+            "last_year": 1962,
+            "is_australia": false
+          },
+          {
+            "circuitId": 9,
+            "circuit_name": "Silverstone Circuit",
+            "location": "Silverstone",
+            "country": "UK",
+            "lat": 52.0786,
+            "lng": -1.01694,
+            "race_count": 59,
+            "first_year": 1950,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 69,
+            "circuit_name": "Circuit of the Americas",
+            "location": "Austin",
+            "country": "USA",
+            "lat": 30.1328,
+            "lng": -97.6411,
+            "race_count": 12,
+            "first_year": 2012,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 43,
+            "circuit_name": "Long Beach",
+            "location": "California",
+            "country": "USA",
+            "lat": 33.7651,
+            "lng": -118.189,
+            "race_count": 8,
+            "first_year": 1976,
+            "last_year": 1983,
+            "is_australia": false
+          },
+          {
+            "circuitId": 60,
+            "circuit_name": "Riverside International Raceway",
+            "location": "California",
+            "country": "USA",
+            "lat": 33.937,
+            "lng": -117.273,
+            "race_count": 1,
+            "first_year": 1960,
+            "last_year": 1960,
+            "is_australia": false
+          },
+          {
+            "circuitId": 42,
+            "circuit_name": "Fair Park",
+            "location": "Dallas",
+            "country": "USA",
+            "lat": 32.7774,
+            "lng": -96.7587,
+            "race_count": 1,
+            "first_year": 1984,
+            "last_year": 1984,
+            "is_australia": false
+          },
+          {
+            "circuitId": 37,
+            "circuit_name": "Detroit Street Circuit",
+            "location": "Detroit",
+            "country": "USA",
+            "lat": 42.3298,
+            "lng": -83.0401,
+            "race_count": 7,
+            "first_year": 1982,
+            "last_year": 1988,
+            "is_australia": false
+          },
+          {
+            "circuitId": 63,
+            "circuit_name": "Sebring International Raceway",
+            "location": "Florida",
+            "country": "USA",
+            "lat": 27.4547,
+            "lng": -81.3483,
+            "race_count": 1,
+            "first_year": 1959,
+            "last_year": 1959,
+            "is_australia": false
+          },
+          {
+            "circuitId": 19,
+            "circuit_name": "Indianapolis Motor Speedway",
+            "location": "Indianapolis",
+            "country": "USA",
+            "lat": 39.795,
+            "lng": -86.2347,
+            "race_count": 19,
+            "first_year": 1950,
+            "last_year": 2007,
+            "is_australia": false
+          },
+          {
+            "circuitId": 79,
+            "circuit_name": "Miami International Autodrome",
+            "location": "Miami",
+            "country": "USA",
+            "lat": 25.9581,
+            "lng": -80.2389,
+            "race_count": 3,
+            "first_year": 2022,
+            "last_year": 2024,
+            "is_australia": false
+          },
+          {
+            "circuitId": 44,
+            "circuit_name": "Las Vegas Street Circuit",
+            "location": "Nevada",
+            "country": "USA",
+            "lat": 36.1162,
+            "lng": -115.174,
+            "race_count": 2,
+            "first_year": 1981,
+            "last_year": 1982,
+            "is_australia": false
+          },
+          {
+            "circuitId": 46,
+            "circuit_name": "Watkins Glen",
+            "location": "New York State",
+            "country": "USA",
+            "lat": 42.3369,
+            "lng": -76.9272,
+            "race_count": 20,
+            "first_year": 1961,
+            "last_year": 1980,
+            "is_australia": false
+          },
+          {
+            "circuitId": 33,
+            "circuit_name": "Phoenix street circuit",
+            "location": "Phoenix",
+            "country": "USA",
+            "lat": 33.4479,
+            "lng": -112.075,
+            "race_count": 3,
+            "first_year": 1989,
+            "last_year": 1991,
+            "is_australia": false
+          },
+          {
+            "circuitId": 80,
+            "circuit_name": "Las Vegas Strip Street Circuit",
+            "location": "Las Vegas",
+            "country": "United States",
+            "lat": 36.1147,
+            "lng": -115.173,
+            "race_count": 2,
+            "first_year": 2023,
+            "last_year": 2024,
+            "is_australia": false
+          }
+        ]
+      },
+      "mark": {
+        "type": "circle",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lng",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "race_count",
+          "type": "quantitative",
+          "scale": {
+            "range": [
+              18,
+              420
+            ]
+          },
+          "legend": {
+            "title": "Races hosted"
+          }
+        },
+        "color": {
+          "condition": {
+            "test": "datum.is_australia === true",
+            "value": "#f0c419"
+          },
+          "value": "#53616f"
+        },
+        "tooltip": [
+          {
+            "field": "circuit_name",
+            "title": "Circuit"
+          },
+          {
+            "field": "location",
+            "title": "Location"
+          },
+          {
+            "field": "country",
+            "title": "Country"
+          },
+          {
+            "field": "race_count",
+            "title": "Races hosted"
+          },
+          {
+            "field": "first_year",
+            "title": "First year"
+          },
+          {
+            "field": "last_year",
+            "title": "Last year"
+          }
+        ]
+      }
+    },
+    {
+      "data": {"values": [{"lat": -31, "lng": 131, "label": "Adelaide · 11 races"}]},
+      "mark": {"type": "text", "align": "right", "fontWeight": "bold", "fontSize": 12, "stroke": "#ffffff", "strokeWidth": 4},
+      "encoding": {
+        "longitude": {"field": "lng", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "data": {"values": [{"lat": -31, "lng": 131, "label": "Adelaide · 11 races"}]},
+      "mark": {"type": "text", "align": "right", "fontWeight": "bold", "fontSize": 12, "color": "#1f2428"},
+      "encoding": {
+        "longitude": {"field": "lng", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "data": {"values": [{"lat": -42, "lng": 148, "label": "Melbourne · 27 races"}]},
+      "mark": {"type": "text", "align": "left", "fontWeight": "bold", "fontSize": 12, "stroke": "#ffffff", "strokeWidth": 4},
+      "encoding": {
+        "longitude": {"field": "lng", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "data": {"values": [{"lat": -42, "lng": 148, "label": "Melbourne · 27 races"}]},
+      "mark": {"type": "text", "align": "left", "fontWeight": "bold", "fontSize": 12, "color": "#1f2428"},
+      "encoding": {
+        "longitude": {"field": "lng", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    },
+
+    {
+      "data": {
+        "values": [
+          {"lat": 66, "lng": -35, "label": "Europe: the sport's traditional heartland"},
+          {"lat": -52, "lng": -90, "label": "77 circuits · 33 countries · 1950–2024"}
+        ]
+      },
+      "mark": {"type": "text", "fontSize": 11, "fontWeight": 600, "fontStyle": "italic", "stroke": "#ffffff", "strokeWidth": 3},
+      "encoding": {
+        "longitude": {"field": "lng", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"lat": 66, "lng": -35, "label": "Europe: the sport's traditional heartland"},
+          {"lat": -52, "lng": -90, "label": "77 circuits · 33 countries · 1950–2024"}
+        ]
+      },
+      "mark": {"type": "text", "fontSize": 11, "fontWeight": 600, "fontStyle": "italic", "color": "#5b6670"},
+      "encoding": {
+        "longitude": {"field": "lng", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    }
+  ]
+}

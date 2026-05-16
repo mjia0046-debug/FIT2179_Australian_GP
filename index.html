@@ -1,0 +1,249 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Australian Grand Prix — Global Race, Local Impact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="vega-styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  </head>
+  <body>
+    <header class="hero">
+      <p class="eyebrow">FIT2179 · Data Visualisation 2 · 2026</p>
+      <h1>Australian Grand Prix: global race, local impact</h1>
+      <p>
+        Thirty-eight races. Two cities. One global sport. How a southern-hemisphere round of
+        Formula 1 became Victoria's biggest sporting export.
+      </p>
+      <div class="stat-row">
+        <div class="stat-block">
+          <span class="stat-number">38</span>
+          <span class="stat-label">Australian GPs in dataset</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-number">2</span>
+          <span class="stat-label">Host cities</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-number">11</span>
+          <span class="stat-label">Winning nationalities</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-number">$324M</span>
+          <span class="stat-label">2025 GSP impact</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="section-title">
+          <span>01</span>
+          <div>
+            <h2>A global sport lands in Australia</h2>
+            <p>F1 circuits form a global map. Australia is highlighted through Adelaide and Melbourne.</p>
+          </div>
+        </div>
+        <div class="grid two">
+          <article class="panel">
+            <h3>Global F1 circuits</h3>
+            <div class="story-copy">
+              <p>F1 started in Europe in 1950 and has since grown into a genuinely global series. Australia is a long way from that original heartland, yet Adelaide and Melbourne have been on the calendar for four decades. Larger dots = more races held at that circuit.</p>
+            </div>
+            <div id="chart-001"></div>
+          </article>
+          <article class="panel">
+            <h3>Australian GP host eras</h3>
+            <div class="story-copy">
+              <p>Adelaide had 11 races (1985–95), then Melbourne took over and ran 24 straight (1996–2019). COVID wiped out 2020 and 2021. Melbourne picked up again in 2022.</p>
+            </div>
+            <div id="chart-002"></div>
+          </article>
+        </div>
+        <div class="takeaway">
+          <strong>Takeaway</strong>
+          <p>The Australian GP is not some isolated local event — it's how Australia plugs into a racing series that touches six continents.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <span>02</span>
+          <div>
+            <h2>Home drivers and global champions</h2>
+            <p>Australian drivers carry the home-race story; international champions shape the race record.</p>
+          </div>
+        </div>
+        <div class="grid two">
+          <article class="panel">
+            <h3>Australian home drivers <span class="hint">▶ Click a name</span></h3>
+            <div class="story-copy">
+              <p>From Brabham in the 1950s to Piastri today, 19 Australians have raced in F1 — though only two ever won the championship. Click a name to see stats.</p>
+            </div>
+            <div id="chart-003"></div>
+          </article>
+          <article class="panel">
+            <h3>Top non-Australian drivers <span class="hint">▶ Switch metric ↑</span></h3>
+            <p class="chart-note">Metric switch: Wins = victories; Podiums = P1-P3; Top 10 = P1-P10 finishes.</p>
+            <div class="story-copy">
+              <p>Schumacher leads with 4 wins in Melbourne; Vettel and Button each have 3. Use the selector to flip between wins, podiums, and top-10 finishes — the ranking shuffles quite a bit depending on the metric.</p>
+            </div>
+            <div id="chart-004"></div>
+          </article>
+        </div>
+        <div class="grid full" style="margin-top:20px;">
+          <article class="panel">
+            <h3>Australian driver career timeline</h3>
+            <div class="story-copy">
+              <p>Grey bars show each driver's career span; red dots mark home-GP appearances. The coloured band at the top shows which era (Adelaide / Melbourne / Pause / Return) each year falls into.</p>
+            </div>
+            <div id="chart-011"></div>
+          </article>
+        </div>
+        <div class="takeaway">
+          <strong>Takeaway</strong>
+          <p>Local drivers give the crowd someone to cheer for, even though the race winners are almost always from overseas.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <span>03</span>
+          <div>
+            <h2>Winning the Australian GP is international history</h2>
+            <p>Click a country tile to reveal the winning drivers behind that country's Australian GP record.</p>
+          </div>
+        </div>
+        <div class="grid full">
+          <article class="panel">
+            <h3>Where do the winners come from?</h3>
+            <div class="story-copy">
+              <p>Each arc connects a winning country to Melbourne — thicker = more wins. 10 of the 11 nationalities are European, with Brazil the sole non-European winner.</p>
+            </div>
+            <div id="chart-012"></div>
+          </article>
+        </div>
+        <div class="grid full" style="margin-top:20px;">
+          <article class="panel">
+            <h3>Champion nationalities and winning drivers <span class="hint">▶ Click a country</span></h3>
+            <div class="story-copy">
+              <p>The UK and Germany have the most wins, but 11 nationalities appear overall. Click a country to drill down — e.g. the UK's 11 wins are spread across six different drivers, not one superstar.</p>
+            </div>
+            <div id="chart-005-006"></div>
+          </article>
+        </div>
+        <div class="takeaway">
+          <strong>Takeaway</strong>
+          <p>Wins are concentrated in a few nations, but look closer and each total comes from different drivers, teams, and decades — no single dynasty owns this race.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <span>04</span>
+          <div>
+            <h2>Constructor legacy and dominance</h2>
+            <p>Every point is a race year; the treemap shows each constructor's share of Australian GP wins.</p>
+          </div>
+        </div>
+        <div class="grid full">
+          <article class="panel">
+            <h3>AUS-shaped constructor track + treemap <span class="hint">▶ Hover or click a team</span></h3>
+            <div class="story-copy">
+              <p>Follow the AUS-shaped path year by year — each dot is one race winner, coloured by team. The treemap underneath totals up wins per constructor. Ferrari, McLaren, and Mercedes each dominated different periods.</p>
+            </div>
+            <div id="chart-007"></div>
+          </article>
+        </div>
+        <div class="takeaway">
+          <strong>Takeaway</strong>
+          <p>Team-level history is a story of eras: Williams and McLaren in the 90s, Ferrari in the 2000s, Mercedes after 2014. No one team holds this race permanently.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <span>05</span>
+          <div>
+            <h2>The spectacle becomes economic impact</h2>
+            <p>Since the post-pandemic return, visitors, economic contribution, and supported jobs have grown.</p>
+          </div>
+        </div>
+        <div class="grid full">
+          <article class="panel">
+            <h3>Post-pandemic growth at a glance</h3>
+            <div class="story-copy">
+              <p>All four metrics are set to 100 at 2022 so you can compare growth rates directly. Overseas visitors jumped the most (+221%), then FTE jobs (+122%) and spending (+89%). Total unique visitors grew a steadier +31%.</p>
+            </div>
+            <div id="chart-013"></div>
+          </article>
+        </div>
+        <div class="grid three" style="margin-top:20px;">
+          <article class="panel">
+            <h3>Visitor origin</h3>
+            <div class="story-copy">
+              <p>Once the race came back, visitor numbers climbed every year. Interstate fans make up the bulk, but <strong>overseas visitors tripled</strong> — from 6,471 in 2022 to 20,792 in 2025, pushing their share from ~9% up to 21%.</p>
+            </div>
+            <div id="chart-008"></div>
+          </article>
+          <article class="panel">
+            <h3>Direct expenditure and GSP</h3>
+            <div class="story-copy">
+              <p>Visitor spending (hotels, food, transport, tickets) nearly doubled from $92M to $174M. The broader GSP contribution — Victoria's share of economic activity linked to the race — went from $171M to $324M over the same period.</p>
+            </div>
+            <div id="chart-009"></div>
+          </article>
+          <article class="panel">
+            <h3>FTE jobs supported</h3>
+            <div class="story-copy">
+              <p>FTE jobs tied to the race more than doubled — 734 in 2022 up to 1,631 in 2025. That's hospitality, security, transport, media production, and everything else that keeps a major event running.</p>
+            </div>
+            <div id="chart-010"></div>
+          </article>
+        </div>
+        <article class="panel closing-panel">
+          <h3>Overall message</h3>
+          <div class="story-copy">
+            <p>Three threads run through this story: the race connects Australia to a worldwide sport; it creates local memories via home drivers, overseas champions, and team rivalries; and since the pandemic, it has become a serious economic engine for Victoria — bringing tourists, spending, and jobs that keep growing year on year.</p>
+          </div>
+        </article>
+        <div class="takeaway">
+          <strong>Takeaway</strong>
+          <p>Since coming back in 2022, every key number has gone up — overseas visitors tripled and FTE jobs more than doubled, while total attendance rose 31% and spending grew 89%.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <h4>About this work</h4>
+          <p>Author: <strong>Menghan Jiang</strong> · Student ID: <strong>35582138</strong></p>
+          <p>FIT2179 Data Visualisation 2 · Semester 1 2026, Monash University</p>
+          <p>Last updated: <strong>15 May 2026</strong></p>
+        </div>
+        <div>
+          <h4>Data sources</h4>
+          <ul>
+            <li>Vopani. <a href="https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020">Formula 1 World Championship (1950–2024)</a>, Kaggle (CC0).</li>
+            <li>Victorian Government (DJSIR). Formula 1 Australian Grand Prix Economic Impact Reports: <a href="https://djsir.vic.gov.au/__data/assets/pdf_file/0011/2397782/2022-Formula-1-Australian-Grand-Prix-Economic-Impact.pdf">2022</a>, <a href="https://djsir.vic.gov.au/__data/assets/pdf_file/0004/2397784/2023-Formula-1-Australian-Grand-Prix-Economic-Impact.pdf">2023</a>, <a href="https://djsir.vic.gov.au/__data/assets/pdf_file/0005/2464286/Economic-impact-assessment-of-the-2024-and-2025-Australian-Grand-Prix.pdf">2024–2025</a>.</li>
+            <li>Natural Earth via <a href="https://github.com/topojson/world-atlas">world-atlas</a> TopoJSON.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Acknowledgements</h4>
+          <p>Generative AI (Claude / ChatGPT / GitHub Copilot) was used for: copy-editing English narrative text, suggesting Vega-Lite spec patterns, and drafting CSS layout. All data wrangling, chart design, and sketch are the author's own work.</p>
+          <p>Icons from <a href="https://lucide.dev">Lucide</a> (ISC). Fonts from Google Fonts.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="vega-page.js"></script>
+  </body>
+</html>
+

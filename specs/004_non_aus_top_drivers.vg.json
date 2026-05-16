@@ -1,0 +1,119 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 420,
+  "config": {
+    "view": {"stroke": null},
+    "axis": {
+      "labelColor": "#5d6670",
+      "titleColor": "#30353b",
+      "gridColor": "#e6e8e3",
+      "domainColor": "#cfd4ce",
+      "tickColor": "#cfd4ce"
+    },
+    "legend": {
+      "labelColor": "#30353b",
+      "titleColor": "#30353b",
+      "orient": "bottom"
+    },
+    "font": "Inter"
+  },
+  "data": {
+    "values": [
+      {"driver": "Michael Schumacher", "nationality": "German", "starts": 19, "wins": 4, "podiums": 6, "top10_finishes": 9, "best_finish": 1, "points": 58.0},
+      {"driver": "Sebastian Vettel", "nationality": "German", "starts": 13, "wins": 3, "podiums": 7, "top10_finishes": 8, "best_finish": 1, "points": 150.0},
+      {"driver": "Jenson Button", "nationality": "British", "starts": 17, "wins": 3, "podiums": 4, "top10_finishes": 9, "best_finish": 1, "points": 88.0},
+      {"driver": "Lewis Hamilton", "nationality": "British", "starts": 16, "wins": 2, "podiums": 10, "top10_finishes": 13, "best_finish": 1, "points": 194.0},
+      {"driver": "Kimi Räikkönen", "nationality": "Finnish", "starts": 17, "wins": 2, "podiums": 6, "top10_finishes": 13, "best_finish": 1, "points": 99.0},
+      {"driver": "Gerhard Berger", "nationality": "Austrian", "starts": 13, "wins": 2, "podiums": 4, "top10_finishes": 9, "best_finish": 1, "points": 39.0},
+      {"driver": "David Coulthard", "nationality": "British", "starts": 14, "wins": 2, "podiums": 4, "top10_finishes": 8, "best_finish": 1, "points": 39.0},
+      {"driver": "Nico Rosberg", "nationality": "German", "starts": 11, "wins": 2, "podiums": 4, "top10_finishes": 7, "best_finish": 1, "points": 89.0},
+      {"driver": "Alain Prost", "nationality": "French", "starts": 7, "wins": 2, "podiums": 4, "top10_finishes": 4, "best_finish": 1, "points": 28.0},
+      {"driver": "Ayrton Senna", "nationality": "Brazilian", "starts": 9, "wins": 2, "podiums": 3, "top10_finishes": 5, "best_finish": 1, "points": 21.0}
+    ]
+  },
+  "params": [
+    {
+      "name": "metric",
+      "value": "wins",
+      "bind": {
+        "input": "select",
+        "options": ["wins", "podiums", "top10_finishes"],
+        "labels": ["Wins", "Podiums", "Top 10 finishes"],
+        "name": "Metric: "
+      }
+    }
+  ],
+  "transform": [
+    {"calculate": "datum[metric]", "as": "selected_metric"}
+  ],
+  "layer": [
+    {
+      "mark": {"type": "bar", "cornerRadiusEnd": 3, "cursor": "pointer"},
+      "encoding": {
+        "y": {
+          "field": "driver",
+          "type": "nominal",
+          "sort": {"field": "selected_metric", "op": "max", "order": "descending"},
+          "axis": {"title": null}
+        },
+        "x": {
+          "field": "selected_metric",
+          "type": "quantitative",
+          "axis": {"title": null, "grid": false}
+        },
+        "color": {
+          "field": "nationality",
+          "type": "nominal",
+          "scale": {
+            "domain": ["German", "British", "Finnish", "Austrian", "French", "Brazilian"],
+            "range": ["#1f2428", "#2457c5", "#8ec8e8", "#d40000", "#007a63", "#f0c419"]
+          },
+          "legend": {"title": "Nationality"}
+        },
+        "tooltip": [
+          {"field": "driver"},
+          {"field": "nationality"},
+          {"field": "wins"},
+          {"field": "podiums"},
+          {"field": "top10_finishes", "title": "Top 10"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "dx": 5, "fontWeight": "bold", "fontSize": 13},
+      "encoding": {
+        "y": {"field": "driver", "type": "nominal", "sort": {"field": "selected_metric", "op": "max", "order": "descending"}},
+        "x": {"field": "selected_metric", "type": "quantitative"},
+        "text": {"field": "selected_metric", "format": ".0f"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.driver === 'Michael Schumacher'"}],
+      "mark": {"type": "text", "align": "right", "dx": -6, "dy": 1, "fontSize": 9.5, "fontWeight": 600, "fontFamily": "Titillium Web", "color": "#ffffff"},
+      "encoding": {
+        "y": {"field": "driver", "type": "nominal", "sort": {"field": "selected_metric", "op": "max", "order": "descending"}},
+        "x": {"field": "selected_metric", "type": "quantitative"},
+        "text": {"value": "Most wins — all with Ferrari, 2000–04"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.driver === 'Lewis Hamilton'"}],
+      "mark": {"type": "text", "align": "right", "dx": -6, "dy": 1, "fontSize": 9.5, "fontWeight": 600, "fontFamily": "Titillium Web", "color": "#ffffff"},
+      "encoding": {
+        "y": {"field": "driver", "type": "nominal", "sort": {"field": "selected_metric", "op": "max", "order": "descending"}},
+        "x": {"field": "selected_metric", "type": "quantitative"},
+        "text": {"value": "Most podiums (10) despite only 2 wins"}
+      }
+    },
+    {
+      "data": {"values": [{"label": "6 nationalities among the top 10"}]},
+      "mark": {"type": "text", "align": "right", "fontSize": 10, "fontWeight": 500, "fontStyle": "italic", "color": "#5b6670"},
+      "encoding": {
+        "x": {"value": 330},
+        "y": {"value": -6},
+        "text": {"field": "label"}
+      }
+    }
+  ]
+}

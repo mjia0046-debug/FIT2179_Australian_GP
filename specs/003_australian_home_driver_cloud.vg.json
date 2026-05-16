@@ -1,0 +1,491 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 360,
+  "padding": {"left": 20, "right": 20, "top": 20, "bottom": 20},
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#5d6670",
+      "titleColor": "#30353b",
+      "gridColor": "#e6e8e3",
+      "domainColor": "#cfd4ce",
+      "tickColor": "#cfd4ce"
+    },
+    "legend": {
+      "labelColor": "#30353b",
+      "titleColor": "#30353b",
+      "orient": "bottom"
+    },
+    "font": "Inter"
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "driver": "Jack Brabham",
+            "nationality": "Australian",
+            "career_starts": 128,
+            "career_wins": 14,
+            "career_podiums": 31,
+            "career_top10_finishes": 73,
+            "career_best_finish": 1,
+            "career_points": 261.0,
+            "home_gp_starts": 0,
+            "home_gp_top10_finishes": 0,
+            "home_gp_best_finish": 0,
+            "weight": 244.31370849898477,
+            "profile": "Three-time world champion and the deepest historical anchor for Australian F1 culture.",
+            "x": 0.50,
+            "y": 0.47
+          },
+          {
+            "driver": "Alan Jones",
+            "nationality": "Australian",
+            "career_starts": 117,
+            "career_wins": 12,
+            "career_podiums": 24,
+            "career_top10_finishes": 54,
+            "career_best_finish": 1,
+            "career_points": 206.0,
+            "home_gp_starts": 2,
+            "home_gp_top10_finishes": 0,
+            "home_gp_best_finish": 21,
+            "weight": 196.81665382639196,
+            "profile": "Australia's 1980 world champion, connecting this race to national motorsport memory.",
+            "x": 0.17,
+            "y": 0.25
+          },
+          {
+            "driver": "Mark Webber",
+            "nationality": "Australian",
+            "career_starts": 217,
+            "career_wins": 9,
+            "career_podiums": 42,
+            "career_top10_finishes": 133,
+            "career_best_finish": 1,
+            "career_points": 1046.0,
+            "home_gp_starts": 12,
+            "home_gp_top10_finishes": 6,
+            "home_gp_best_finish": 4,
+            "weight": 312.7309198626562,
+            "profile": "Long-serving Australian F1 driver with the strongest Australian GP top-10 count in this dataset.",
+            "x": 0.80,
+            "y": 0.25
+          },
+          {
+            "driver": "Daniel Ricciardo",
+            "nationality": "Australian",
+            "career_starts": 257,
+            "career_wins": 8,
+            "career_podiums": 32,
+            "career_top10_finishes": 135,
+            "career_best_finish": 1,
+            "career_points": 1320.0,
+            "home_gp_starts": 10,
+            "home_gp_top10_finishes": 5,
+            "home_gp_best_finish": 4,
+            "weight": 286.0312195418814,
+            "profile": "Modern Australian fan favourite whose home-race best finish reached fourth.",
+            "x": 0.22,
+            "y": 0.73
+          },
+          {
+            "driver": "Oscar Piastri",
+            "nationality": "Australian",
+            "career_starts": 46,
+            "career_wins": 2,
+            "career_podiums": 10,
+            "career_top10_finishes": 34,
+            "career_best_finish": 1,
+            "career_points": 347.0,
+            "home_gp_starts": 2,
+            "home_gp_top10_finishes": 2,
+            "home_gp_best_finish": 4,
+            "weight": 80.78232998312527,
+            "profile": "Current-generation Australian driver with early Australian GP top-10 finishes.",
+            "x": 0.78,
+            "y": 0.73
+          },
+          {
+            "driver": "Tim Schenken",
+            "nationality": "Australian",
+            "career_starts": 36,
+            "career_wins": 0,
+            "career_podiums": 1,
+            "career_top10_finishes": 9,
+            "career_best_finish": 3,
+            "career_points": 7.0,
+            "home_gp_starts": 0,
+            "home_gp_top10_finishes": 0,
+            "home_gp_best_finish": 0,
+            "weight": 17.0,
+            "profile": "Australian Formula 1 driver; included to show the broader national racing lineage.",
+            "x": 0.05,
+            "y": 0.47
+          },
+          {
+            "driver": "David Brabham",
+            "nationality": "Australian",
+            "career_starts": 30,
+            "career_wins": 0,
+            "career_podiums": 0,
+            "career_top10_finishes": 2,
+            "career_best_finish": 10,
+            "career_points": 0.0,
+            "home_gp_starts": 2,
+            "home_gp_top10_finishes": 0,
+            "home_gp_best_finish": 17,
+            "weight": 7.477225575051661,
+            "profile": "Australian Formula 1 driver; included to show the broader national racing lineage.",
+            "x": 0.95,
+            "y": 0.47
+          },
+          {
+            "driver": "David Walker",
+            "nationality": "Australian",
+            "career_starts": 11,
+            "career_wins": 0,
+            "career_podiums": 0,
+            "career_top10_finishes": 2,
+            "career_best_finish": 9,
+            "career_points": 0.0,
+            "home_gp_starts": 0,
+            "home_gp_top10_finishes": 0,
+            "home_gp_best_finish": 0,
+            "weight": 5.3166247903554,
+            "profile": "Australian Formula 1 driver; included to show the broader national racing lineage.",
+            "x": 0.50,
+            "y": 0.08
+          },
+          {
+            "driver": "Paul Hawkins",
+            "nationality": "Australian",
+            "career_starts": 3,
+            "career_wins": 0,
+            "career_podiums": 0,
+            "career_top10_finishes": 2,
+            "career_best_finish": 9,
+            "career_points": 0.0,
+            "home_gp_starts": 0,
+            "home_gp_top10_finishes": 0,
+            "home_gp_best_finish": 0,
+            "weight": 3.732050807568877,
+            "profile": "Australian Formula 1 driver; included to show the broader national racing lineage.",
+            "x": 0.50,
+            "y": 0.90
+          },
+          {
+            "driver": "Frank Gardner",
+            "nationality": "Australian",
+            "career_starts": 9,
+            "career_wins": 0,
+            "career_podiums": 0,
+            "career_top10_finishes": 1,
+            "career_best_finish": 8,
+            "career_points": 0.0,
+            "home_gp_starts": 0,
+            "home_gp_top10_finishes": 0,
+            "home_gp_best_finish": 0,
+            "weight": 4.0,
+            "profile": "Australian Formula 1 driver; included to show the broader national racing lineage.",
+            "x": 0.05,
+            "y": 0.14
+          },
+          {
+            "driver": "Larry Perkins",
+            "nationality": "Australian",
+            "career_starts": 15,
+            "career_wins": 0,
+            "career_podiums": 0,
+            "career_top10_finishes": 1,
+            "career_best_finish": 8,
+            "career_points": 0.0,
+            "home_gp_starts": 0,
+            "home_gp_top10_finishes": 0,
+            "home_gp_best_finish": 0,
+            "weight": 4.872983346207417,
+            "profile": "Australian Formula 1 driver; included to show the broader national racing lineage.",
+            "x": 0.95,
+            "y": 0.14
+          },
+          {
+            "driver": "Vern Schuppan",
+            "nationality": "Australian",
+            "career_starts": 12,
+            "career_wins": 0,
+            "career_podiums": 0,
+            "career_top10_finishes": 1,
+            "career_best_finish": 7,
+            "career_points": 0.0,
+            "home_gp_starts": 0,
+            "home_gp_top10_finishes": 0,
+            "home_gp_best_finish": 0,
+            "weight": 4.464101615137754,
+            "profile": "Australian Formula 1 driver; included to show the broader national racing lineage.",
+            "x": 0.05,
+            "y": 0.62
+          },
+          {
+            "driver": "Brian McGuire",
+            "nationality": "Australian",
+            "career_starts": 1,
+            "career_wins": 0,
+            "career_podiums": 0,
+            "career_top10_finishes": 0,
+            "career_best_finish": 35,
+            "career_points": 0.0,
+            "home_gp_starts": 0,
+            "home_gp_top10_finishes": 0,
+            "home_gp_best_finish": 0,
+            "weight": 1.0,
+            "profile": "Australian Formula 1 driver; included to show the broader national racing lineage.",
+            "x": 0.95,
+            "y": 0.62
+          },
+          {
+            "driver": "Gary Brabham",
+            "nationality": "Australian",
+            "career_starts": 2,
+            "career_wins": 0,
+            "career_podiums": 0,
+            "career_top10_finishes": 0,
+            "career_best_finish": 34,
+            "career_points": 0.0,
+            "home_gp_starts": 0,
+            "home_gp_top10_finishes": 0,
+            "home_gp_best_finish": 0,
+            "weight": 1.4142135623730951,
+            "profile": "Australian Formula 1 driver; included to show the broader national racing lineage.",
+            "x": 0.32,
+            "y": 0.08
+          },
+          {
+            "driver": "Jack Doohan",
+            "nationality": "Australian",
+            "career_starts": 1,
+            "career_wins": 0,
+            "career_podiums": 0,
+            "career_top10_finishes": 0,
+            "career_best_finish": 15,
+            "career_points": 0.0,
+            "home_gp_starts": 0,
+            "home_gp_top10_finishes": 0,
+            "home_gp_best_finish": 0,
+            "weight": 1.0,
+            "profile": "Australian Formula 1 driver; included to show the broader national racing lineage.",
+            "x": 0.68,
+            "y": 0.08
+          },
+          {
+            "driver": "Ken Kavanagh",
+            "nationality": "Australian",
+            "career_starts": 1,
+            "career_wins": 0,
+            "career_podiums": 0,
+            "career_top10_finishes": 0,
+            "career_best_finish": 18,
+            "career_points": 0.0,
+            "home_gp_starts": 0,
+            "home_gp_top10_finishes": 0,
+            "home_gp_best_finish": 0,
+            "weight": 1.0,
+            "profile": "Australian Formula 1 driver; included to show the broader national racing lineage.",
+            "x": 0.28,
+            "y": 0.93
+          },
+          {
+            "driver": "Paul England",
+            "nationality": "Australian",
+            "career_starts": 1,
+            "career_wins": 0,
+            "career_podiums": 0,
+            "career_top10_finishes": 0,
+            "career_best_finish": 22,
+            "career_points": 0.0,
+            "home_gp_starts": 0,
+            "home_gp_top10_finishes": 0,
+            "home_gp_best_finish": 0,
+            "weight": 1.0,
+            "profile": "Australian Formula 1 driver; included to show the broader national racing lineage.",
+            "x": 0.72,
+            "y": 0.93
+          },
+          {
+            "driver": "Tony Gaze",
+            "nationality": "Australian",
+            "career_starts": 4,
+            "career_wins": 0,
+            "career_podiums": 0,
+            "career_top10_finishes": 0,
+            "career_best_finish": 15,
+            "career_points": 0.0,
+            "home_gp_starts": 0,
+            "home_gp_top10_finishes": 0,
+            "home_gp_best_finish": 0,
+            "weight": 2.0,
+            "profile": "Australian Formula 1 driver; included to show the broader national racing lineage.",
+            "x": 0.95,
+            "y": 0.36
+          },
+          {
+            "driver": "Warwick Brown",
+            "nationality": "Australian",
+            "career_starts": 1,
+            "career_wins": 0,
+            "career_podiums": 0,
+            "career_top10_finishes": 0,
+            "career_best_finish": 14,
+            "career_points": 0.0,
+            "home_gp_starts": 0,
+            "home_gp_top10_finishes": 0,
+            "home_gp_best_finish": 0,
+            "weight": 1.0,
+            "profile": "Australian Formula 1 driver; included to show the broader national racing lineage.",
+            "x": 0.05,
+            "y": 0.36
+          }
+        ]
+      },
+      "transform": [
+        {
+          "calculate": "datum.career_wins >= 12 ? 'World champion' : datum.career_wins > 0 ? 'Race winner' : datum.career_podiums > 0 || datum.career_top10_finishes > 0 ? 'Points scorer' : 'F1 entrant'",
+          "as": "tier"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontWeight": "bold",
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {"domain": [0, 1]}
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {"domain": [0, 1], "reverse": true}
+        },
+        "text": {
+          "field": "driver"
+        },
+        "size": {
+          "field": "weight",
+          "type": "quantitative",
+          "scale": {
+            "type": "pow",
+            "exponent": 0.5,
+            "range": [10, 26]
+          },
+          "legend": null
+        },
+        "color": {
+          "field": "tier",
+          "type": "nominal",
+          "scale": {
+            "domain": ["World champion", "Race winner", "Points scorer", "F1 entrant"],
+            "range": ["#e10600", "#d4a017", "#2457c5", "#b0b8c1"]
+          },
+          "legend": {
+            "title": "Career tier",
+            "orient": "bottom",
+            "direction": "horizontal"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "driver"
+          },
+          {
+            "field": "tier",
+            "title": "Tier"
+          },
+          {
+            "field": "career_starts",
+            "title": "Career starts"
+          },
+          {
+            "field": "career_wins",
+            "title": "Career wins"
+          },
+          {
+            "field": "home_gp_starts",
+            "title": "Australian GP starts"
+          },
+          {
+            "field": "home_gp_top10_finishes",
+            "title": "Australian GP Top 10"
+          }
+        ]
+      }
+    },
+
+    {
+      "data": {
+        "values": [{"x": 0.5, "y": 0.99, "label": "Text size reflects career weight · colour shows career tier"}]
+      },
+      "mark": {"type": "text", "fontSize": 10, "fontWeight": 500, "fontStyle": "italic", "color": "#5b6670"},
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative", "axis": null, "scale": {"domain": [0, 1]}},
+        "y": {"field": "y", "type": "quantitative", "axis": null, "scale": {"domain": [0, 1], "reverse": true}},
+        "text": {"field": "label"}
+      }
+    },
+
+    {
+      "data": {
+        "values": [{"x": 0.50, "y": 0.47, "label": "3× World Champion"}]
+      },
+      "mark": {"type": "text", "fontSize": 9, "fontWeight": 600, "fontFamily": "Titillium Web", "color": "#e10600", "dy": 18},
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative", "axis": null, "scale": {"domain": [0, 1]}},
+        "y": {"field": "y", "type": "quantitative", "axis": null, "scale": {"domain": [0, 1], "reverse": true}},
+        "text": {"field": "label"}
+      }
+    },
+
+    {
+      "data": {
+        "values": [{"x": 0.80, "y": 0.25, "label": "Most home GP starts (12)"}]
+      },
+      "mark": {"type": "text", "fontSize": 9, "fontWeight": 600, "fontFamily": "Titillium Web", "color": "#d4a017", "dy": 18},
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative", "axis": null, "scale": {"domain": [0, 1]}},
+        "y": {"field": "y", "type": "quantitative", "axis": null, "scale": {"domain": [0, 1], "reverse": true}},
+        "text": {"field": "label"}
+      }
+    },
+
+    {
+      "data": {
+        "values": [{"x": 0.78, "y": 0.73, "label": "Current generation"}]
+      },
+      "mark": {"type": "text", "fontSize": 9, "fontWeight": 600, "fontFamily": "Titillium Web", "color": "#d4a017", "dy": 16},
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative", "axis": null, "scale": {"domain": [0, 1]}},
+        "y": {"field": "y", "type": "quantitative", "axis": null, "scale": {"domain": [0, 1], "reverse": true}},
+        "text": {"field": "label"}
+      }
+    },
+
+    {
+      "data": {
+        "values": [{"x": 0.50, "y": 0.00, "label": "Only 2 world champions among 19 Australian F1 drivers"}]
+      },
+      "mark": {"type": "text", "fontSize": 10.5, "fontWeight": 600, "fontFamily": "Titillium Web", "color": "#e10600"},
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative", "axis": null, "scale": {"domain": [0, 1]}},
+        "y": {"field": "y", "type": "quantitative", "axis": null, "scale": {"domain": [0, 1], "reverse": true}},
+        "text": {"field": "label"}
+      }
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 420,
+  "config": {
+    "view": {"stroke": null},
+    "axis": {
+      "labelColor": "#5d6670",
+      "titleColor": "#30353b",
+      "gridColor": "#e6e8e3",
+      "domainColor": "#cfd4ce",
+      "tickColor": "#cfd4ce"
+    },
+    "legend": {
+      "labelColor": "#30353b",
+      "titleColor": "#30353b",
+      "orient": "bottom-right"
+    },
+    "font": "Inter"
+  },
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
+        "format": {"type": "topojson", "feature": "countries"}
+      },
+      "mark": {"type": "geoshape", "fill": "#e4e6e1", "stroke": "#ffffff"}
+    },
+
+    {
+      "data": {
+        "values": [
+          {"country": "United Kingdom", "wins": 11, "drivers": "Damon Hill, David Coulthard, Eddie Irvine, Jenson Button, Lewis Hamilton, Nigel Mansell", "src_lat": 56, "src_lng": -6, "dst_lat": -37.8497, "dst_lng": 144.968},
+          {"country": "Germany", "wins": 9, "drivers": "Michael Schumacher, Nico Rosberg, Sebastian Vettel", "src_lat": 54, "src_lng": 14, "dst_lat": -37.8497, "dst_lng": 144.968},
+          {"country": "Finland", "wins": 5, "drivers": "Keke Rosberg, Kimi Räikkönen, Mika Häkkinen, Valtteri Bottas", "src_lat": 65, "src_lng": 28, "dst_lat": -37.8497, "dst_lng": 144.968},
+          {"country": "Brazil", "wins": 3, "drivers": "Ayrton Senna, Nelson Piquet", "src_lat": -10, "src_lng": -55, "dst_lat": -37.8497, "dst_lng": 144.968},
+          {"country": "Spain", "wins": 2, "drivers": "Carlos Sainz, Fernando Alonso", "src_lat": 38, "src_lng": -8, "dst_lat": -37.8497, "dst_lng": 144.968},
+          {"country": "Austria", "wins": 2, "drivers": "Gerhard Berger", "src_lat": 48, "src_lng": 22, "dst_lat": -37.8497, "dst_lng": 144.968},
+          {"country": "France", "wins": 2, "drivers": "Alain Prost", "src_lat": 47, "src_lng": -2, "dst_lat": -37.8497, "dst_lng": 144.968},
+          {"country": "Belgium", "wins": 1, "drivers": "Thierry Boutsen", "src_lat": 53, "src_lng": 1, "dst_lat": -37.8497, "dst_lng": 144.968},
+          {"country": "Netherlands", "wins": 1, "drivers": "Max Verstappen", "src_lat": 55, "src_lng": 7, "dst_lat": -37.8497, "dst_lng": 144.968},
+          {"country": "Italy", "wins": 1, "drivers": "Giancarlo Fisichella", "src_lat": 40, "src_lng": 16, "dst_lat": -37.8497, "dst_lng": 144.968},
+          {"country": "Monaco", "wins": 1, "drivers": "Charles Leclerc", "src_lat": 42, "src_lng": 4, "dst_lat": -37.8497, "dst_lng": 144.968}
+        ]
+      },
+      "mark": {"type": "rule", "opacity": 0.65, "strokeCap": "round"},
+      "encoding": {
+        "longitude": {"field": "src_lng", "type": "quantitative"},
+        "latitude": {"field": "src_lat", "type": "quantitative"},
+        "longitude2": {"field": "dst_lng"},
+        "latitude2": {"field": "dst_lat"},
+        "strokeWidth": {
+          "field": "wins",
+          "type": "quantitative",
+          "scale": {"domain": [1, 11], "range": [0.8, 5]},
+          "legend": null
+        },
+        "color": {
+          "field": "country",
+          "type": "nominal",
+          "scale": {
+            "domain": ["United Kingdom", "Germany", "Finland", "Brazil", "Spain", "Austria", "France", "Belgium", "Netherlands", "Italy", "Monaco"],
+            "range": ["#1f2428", "#2457c5", "#8ec8e8", "#f0c419", "#d40000", "#007a63", "#9467bd", "#e377c2", "#ff7f0e", "#17becf", "#bcbd22"]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "country", "title": "Country"},
+          {"field": "wins", "title": "Australian GP wins"},
+          {"field": "drivers", "title": "Winning drivers"}
+        ]
+      }
+    },
+
+    {
+      "data": {
+        "values": [
+          {"country": "United Kingdom", "wins": 11, "drivers": "Damon Hill, David Coulthard, Eddie Irvine, Jenson Button, Lewis Hamilton, Nigel Mansell", "lat": 56, "lng": -6},
+          {"country": "Germany", "wins": 9, "drivers": "Michael Schumacher, Nico Rosberg, Sebastian Vettel", "lat": 54, "lng": 14},
+          {"country": "Finland", "wins": 5, "drivers": "Keke Rosberg, Kimi Räikkönen, Mika Häkkinen, Valtteri Bottas", "lat": 65, "lng": 28},
+          {"country": "Brazil", "wins": 3, "drivers": "Ayrton Senna, Nelson Piquet", "lat": -10, "lng": -55},
+          {"country": "Spain", "wins": 2, "drivers": "Carlos Sainz, Fernando Alonso", "lat": 38, "lng": -8},
+          {"country": "Austria", "wins": 2, "drivers": "Gerhard Berger", "lat": 48, "lng": 22},
+          {"country": "France", "wins": 2, "drivers": "Alain Prost", "lat": 47, "lng": -2},
+          {"country": "Belgium", "wins": 1, "drivers": "Thierry Boutsen", "lat": 53, "lng": 1},
+          {"country": "Netherlands", "wins": 1, "drivers": "Max Verstappen", "lat": 55, "lng": 7},
+          {"country": "Italy", "wins": 1, "drivers": "Giancarlo Fisichella", "lat": 40, "lng": 16},
+          {"country": "Monaco", "wins": 1, "drivers": "Charles Leclerc", "lat": 42, "lng": 4}
+        ]
+      },
+      "mark": {"type": "circle", "stroke": "#ffffff", "strokeWidth": 1.5},
+      "encoding": {
+        "longitude": {"field": "lng", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "size": {
+          "field": "wins",
+          "type": "quantitative",
+          "scale": {"domain": [1, 11], "range": [40, 320]},
+          "legend": {"title": "Wins"}
+        },
+        "color": {
+          "field": "country",
+          "type": "nominal",
+          "scale": {
+            "domain": ["United Kingdom", "Germany", "Finland", "Brazil", "Spain", "Austria", "France", "Belgium", "Netherlands", "Italy", "Monaco"],
+            "range": ["#1f2428", "#2457c5", "#8ec8e8", "#f0c419", "#d40000", "#007a63", "#9467bd", "#e377c2", "#ff7f0e", "#17becf", "#bcbd22"]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "country", "title": "Country"},
+          {"field": "wins", "title": "Australian GP wins"},
+          {"field": "drivers", "title": "Winning drivers"}
+        ]
+      }
+    },
+
+    {
+      "data": {
+        "values": [
+          {"label": "UK · 11 wins", "lat": 60, "lng": -12, "c": "#1f2428"},
+          {"label": "Germany · 9", "lat": 58, "lng": 18, "c": "#2457c5"},
+          {"label": "Finland · 5", "lat": 69, "lng": 28, "c": "#8ec8e8"},
+          {"label": "Brazil · 3", "lat": -5, "lng": -55, "c": "#f0c419"},
+          {"label": "Spain · 2", "lat": 34, "lng": -12, "c": "#d40000"}
+        ]
+      },
+      "mark": {"type": "text", "fontSize": 10.5, "fontWeight": "bold", "stroke": "#ffffff", "strokeWidth": 3.5},
+      "encoding": {
+        "longitude": {"field": "lng", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"label": "UK · 11 wins", "lat": 60, "lng": -12, "c": "#1f2428"},
+          {"label": "Germany · 9", "lat": 58, "lng": 18, "c": "#2457c5"},
+          {"label": "Finland · 5", "lat": 69, "lng": 28, "c": "#8ec8e8"},
+          {"label": "Brazil · 3", "lat": -5, "lng": -55, "c": "#f0c419"},
+          {"label": "Spain · 2", "lat": 34, "lng": -12, "c": "#d40000"}
+        ]
+      },
+      "mark": {"type": "text", "fontSize": 10.5, "fontWeight": "bold"},
+      "encoding": {
+        "longitude": {"field": "lng", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"},
+        "color": {"field": "c", "type": "nominal", "scale": null}
+      }
+    },
+
+    {
+      "data": {"values": [{"lat": -37.8497, "lng": 144.968}]},
+      "mark": {"type": "point", "shape": "diamond", "size": 220, "fill": "#f0c419", "stroke": "#1f2428", "strokeWidth": 1.5},
+      "encoding": {
+        "longitude": {"field": "lng", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"}
+      }
+    },
+    {
+      "data": {"values": [{"lat": -42, "lng": 148, "label": "Melbourne"}]},
+      "mark": {"type": "text", "fontSize": 12, "fontWeight": "bold", "stroke": "#ffffff", "strokeWidth": 4},
+      "encoding": {
+        "longitude": {"field": "lng", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "data": {"values": [{"lat": -42, "lng": 148, "label": "Melbourne"}]},
+      "mark": {"type": "text", "fontSize": 12, "fontWeight": "bold", "color": "#e10600"},
+      "encoding": {
+        "longitude": {"field": "lng", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    },
+
+    {
+      "data": {"values": [{"lat": -48, "lng": -100, "label": "8 of 11 winning nations are European"}]},
+      "mark": {"type": "text", "fontSize": 11, "fontWeight": 600, "fontStyle": "italic", "stroke": "#ffffff", "strokeWidth": 3},
+      "encoding": {
+        "longitude": {"field": "lng", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "data": {"values": [{"lat": -48, "lng": -100, "label": "8 of 11 winning nations are European"}]},
+      "mark": {"type": "text", "fontSize": 11, "fontWeight": 600, "fontStyle": "italic", "color": "#5b6670"},
+      "encoding": {
+        "longitude": {"field": "lng", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    }
+  ]
+}
